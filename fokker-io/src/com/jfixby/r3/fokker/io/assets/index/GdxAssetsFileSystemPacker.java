@@ -13,7 +13,7 @@ import com.jfixby.scarabei.api.file.FileSystem;
 import com.jfixby.scarabei.api.file.FilesList;
 import com.jfixby.scarabei.api.java.ByteArray;
 import com.jfixby.scarabei.api.log.L;
-import com.jfixby.scarabei.api.util.JUtils;
+import com.jfixby.scarabei.api.util.Utils;
 import com.jfixby.scarabei.api.util.path.RelativePath;
 
 public class GdxAssetsFileSystemPacker {
@@ -30,9 +30,9 @@ public class GdxAssetsFileSystemPacker {
 			index.collapsedFolders = packerParams.collapseFolders;
 			index.encryptedNames = packerParams.encryptNames;
 			index.salt = packerParams.encryptionSalt;
-			final RelativePath path = JUtils.newRelativePath();
+			final RelativePath path = Utils.newRelativePath();
 			indexFolder(index, packerParams.inputAssetsFolder, path, index_file);
-			index.registerFile(JUtils.newRelativePath(GdxAssetsFileSystemIndex.INDEX_FILE_NAME));
+			index.registerFile(Utils.newRelativePath(GdxAssetsFileSystemIndex.INDEX_FILE_NAME));
 			// String string_data = Json.serializeToString(index);
 			index_file.writeData(index);
 // Collections.newList(index.index).print("index built");
@@ -79,7 +79,7 @@ public class GdxAssetsFileSystemPacker {
 		final File index_file = input_folder.child(GdxAssetsFileSystemIndex.INDEX_FILE_NAME);
 		{
 
-			final RelativePath path = JUtils.newRelativePath();
+			final RelativePath path = Utils.newRelativePath();
 			indexFolder(index, input_folder, path, index_file);
 
 			// String string_data = Json.serializeToString(index);
@@ -94,7 +94,7 @@ public class GdxAssetsFileSystemPacker {
 			final List<GdxAssetsFileSystemIndexEntry> index_list = Collections.newList(index.index);
 			for (int i = 0; i < index_list.size(); i++) {
 				final GdxAssetsFileSystemIndexEntry entry_i = index_list.getElementAt(i);
-				final RelativePath relative = JUtils.newRelativePath(entry_i.path);
+				final RelativePath relative = Utils.newRelativePath(entry_i.path);
 				final File file_i = input_folder.proceed(relative);
 				if (!file_i.exists()) {
 					Err.reportError("Index is corrupted: " + file_i);

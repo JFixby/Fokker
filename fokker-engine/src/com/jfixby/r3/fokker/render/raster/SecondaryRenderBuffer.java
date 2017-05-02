@@ -11,7 +11,7 @@ import com.jfixby.r3.engine.api.screen.ScreenDimentionsChecker;
 import com.jfixby.r3.fokker.render.GdxRender;
 import com.jfixby.scarabei.api.color.Colors;
 import com.jfixby.scarabei.api.err.Err;
-import com.jfixby.scarabei.api.util.JUtils;
+import com.jfixby.scarabei.api.util.Utils;
 import com.jfixby.scarabei.api.util.StateSwitcher;
 
 public class SecondaryRenderBuffer {
@@ -22,7 +22,7 @@ public class SecondaryRenderBuffer {
 	public SecondaryRenderBuffer () {
 		super();
 		this.checker = Screen.newScreenDimentionsChecker();
-		buffer_state = JUtils.newStateSwitcher(BUFFER_STATE.PAUSED);
+		buffer_state = Utils.newStateSwitcher(BUFFER_STATE.PAUSED);
 	}
 
 	private void createBuffers () {

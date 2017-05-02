@@ -10,7 +10,7 @@ import com.jfixby.scarabei.api.debug.Debug;
 import com.jfixby.scarabei.api.debug.DebugTimer;
 import com.jfixby.scarabei.api.log.L;
 import com.jfixby.scarabei.api.taskman.SysExecutor;
-import com.jfixby.scarabei.api.util.JUtils;
+import com.jfixby.scarabei.api.util.Utils;
 import com.jfixby.scarabei.api.util.StateSwitcher;
 
 public class GdxAdaptor implements com.badlogic.gdx.ApplicationListener, EngineState {
@@ -32,7 +32,7 @@ public class GdxAdaptor implements com.badlogic.gdx.ApplicationListener, EngineS
 
 	public GdxAdaptor (final EngineExecutor executor) {
 		this.executor = executor != null ? executor : new DefaultExecutor();
-		this.state = JUtils.newStateSwitcher(ENGINE_STATE.NEW);
+		this.state = Utils.newStateSwitcher(ENGINE_STATE.NEW);
 	}
 
 	public com.badlogic.gdx.ApplicationListener getGDXApplicationListener () {

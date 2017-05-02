@@ -7,7 +7,7 @@ import java.io.InputStream;
 
 import com.jfixby.scarabei.api.io.JavaInputStreamOperator;
 import com.jfixby.scarabei.api.java.ByteArray;
-import com.jfixby.scarabei.api.util.JUtils;
+import com.jfixby.scarabei.api.util.Utils;
 
 public class GdxAssetFileFileInputStreamOperator implements JavaInputStreamOperator {
 
@@ -38,7 +38,7 @@ public class GdxAssetFileFileInputStreamOperator implements JavaInputStreamOpera
 
 	@Override
 	public ByteArray readAll () throws IOException {
-		return JUtils.newByteArray(this.file.toFileHandle().readBytes());
+		return Utils.newByteArray(this.file.toFileHandle().readBytes());
 	}
 
 }

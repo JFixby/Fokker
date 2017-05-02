@@ -2,7 +2,7 @@
 package com.jfixby.r3.fokker.render.shader;
 
 import com.jfixby.r3.fokker.shader.api.FokkerShader;
-import com.jfixby.scarabei.api.util.JUtils;
+import com.jfixby.scarabei.api.util.Utils;
 
 public class CurrentFokkerShader {
 
@@ -21,7 +21,7 @@ public class CurrentFokkerShader {
 	}
 
 	static final private boolean equals (final FokkerShader a, final FokkerShader b) {
-		return JUtils.equalObjects(a, b);
+		return Utils.equalObjects(a, b);
 	}
 
 	public final com.badlogic.gdx.graphics.glutils.ShaderProgram getGdxShaderProgram () {

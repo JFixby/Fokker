@@ -27,7 +27,7 @@ import com.jfixby.scarabei.api.geometry.Geometry;
 import com.jfixby.scarabei.api.geometry.Rectangle;
 import com.jfixby.scarabei.api.geometry.projections.Projection;
 import com.jfixby.scarabei.api.sys.settings.SystemSettings;
-import com.jfixby.scarabei.api.util.JUtils;
+import com.jfixby.scarabei.api.util.Utils;
 import com.jfixby.scarabei.api.util.StateSwitcher;
 
 public class FokkerRenderMachine implements RenderMachineComponent {
@@ -64,7 +64,7 @@ public class FokkerRenderMachine implements RenderMachineComponent {
 	@Override
 	final public void deploy () {
 
-		render_state = JUtils.newStateSwitcher(RENDER_MACHINE_STATE.NEW);
+		render_state = Utils.newStateSwitcher(RENDER_MACHINE_STATE.NEW);
 
 		// L.d("init()", render_state);
 		render_state.setDebugName("render_state");

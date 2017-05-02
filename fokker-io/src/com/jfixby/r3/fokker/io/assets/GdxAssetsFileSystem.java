@@ -14,7 +14,7 @@ import com.jfixby.scarabei.api.file.FileInputStream;
 import com.jfixby.scarabei.api.file.FileOutputStream;
 import com.jfixby.scarabei.api.file.FileSystem;
 import com.jfixby.scarabei.api.log.L;
-import com.jfixby.scarabei.api.util.JUtils;
+import com.jfixby.scarabei.api.util.Utils;
 import com.jfixby.scarabei.api.util.path.AbsolutePath;
 import com.jfixby.scarabei.api.util.path.RelativePath;
 import com.jfixby.scarabei.red.filesystem.AbstractFileSystem;
@@ -34,7 +34,7 @@ public class GdxAssetsFileSystem extends AbstractFileSystem implements FileSyste
 		for (int i = 0; i < this.index_data.index.size(); i++) {
 			final GdxAssetsFileSystemIndexEntry entry = this.index_data.index.get(i);
 // L.d("checking", entry.path);
-			final RelativePath path = JUtils.newRelativePath(entry.path);
+			final RelativePath path = Utils.newRelativePath(entry.path);
 			String file_name = internalFileName(path, this);
 			if (GdxAssetsFileSystemIndex.INDEX_FILE_NAME.equals(entry.path)) {
 				file_name = path.toString();

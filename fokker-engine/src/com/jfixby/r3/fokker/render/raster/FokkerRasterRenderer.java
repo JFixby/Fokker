@@ -16,7 +16,7 @@ import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.err.Err;
 import com.jfixby.scarabei.api.geometry.CanvasPosition;
 import com.jfixby.scarabei.api.geometry.Rectangle;
-import com.jfixby.scarabei.api.util.JUtils;
+import com.jfixby.scarabei.api.util.Utils;
 import com.jfixby.scarabei.api.util.StateSwitcher;
 
 public class FokkerRasterRenderer extends Renderer {
@@ -39,7 +39,7 @@ public class FokkerRasterRenderer extends Renderer {
 		GdxRender.activateRasterRenderer();
 		this.primary_buffer = primary_buffer;
 
-		this.blend_state = JUtils.newStateSwitcher(TEXTURE_BLEND_MODE.Normal);
+		this.blend_state = Utils.newStateSwitcher(TEXTURE_BLEND_MODE.Normal);
 		this.current_shader.init();
 	}
 

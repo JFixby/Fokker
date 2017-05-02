@@ -6,7 +6,7 @@ import com.jfixby.r3.fokker.font.api.FokkerFonts;
 import com.jfixby.r3.fokker.shader.api.FokkerShaders;
 import com.jfixby.r3.fokker.texture.api.FokkerTextures;
 import com.jfixby.scarabei.api.log.L;
-import com.jfixby.scarabei.api.util.JUtils;
+import com.jfixby.scarabei.api.strings.Strings;
 
 public class FokkerVersion implements EngineVersion {
 
@@ -33,7 +33,7 @@ public class FokkerVersion implements EngineVersion {
 	}
 
 	static private void print (final int offset, final String name, final Object value) {
-		L.d(JUtils.prefix(" ", offset - name.length()) + name + " - " + value);
+		L.d(Strings.prefix(" ", offset - name.length()) + name + " - " + value);
 	}
 
 	@Override

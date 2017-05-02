@@ -20,7 +20,7 @@ import com.jfixby.scarabei.api.file.FilesList;
 import com.jfixby.scarabei.api.io.IO;
 import com.jfixby.scarabei.api.java.ByteArray;
 import com.jfixby.scarabei.api.log.L;
-import com.jfixby.scarabei.api.util.JUtils;
+import com.jfixby.scarabei.api.strings.Strings;
 import com.jfixby.scarabei.api.util.path.AbsolutePath;
 import com.jfixby.scarabei.api.util.path.RelativePath;
 import com.jfixby.scarabei.red.filesystem.RedFilesList;
@@ -432,12 +432,12 @@ public class GdxAssetFile implements File {
 
 	@Override
 	public String readToString () throws IOException {
-		return JUtils.newString(this.readBytes());
+		return Strings.newString(this.readBytes());
 	}
 
 	@Override
 	public String readToString (final String encoding) throws IOException {
-		return JUtils.newString(this.readBytes(), encoding);
+		return Strings.newString(this.readBytes(), encoding);
 	}
 
 	@Override
