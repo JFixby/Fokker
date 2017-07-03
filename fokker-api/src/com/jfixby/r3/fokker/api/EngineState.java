@@ -1,13 +1,12 @@
-package com.jfixby.r3.fokker.api;
 
-import com.jfixby.r3.api.input.InputQueue;
+package com.jfixby.r3.fokker.api;
 
 public interface EngineState {
 
-	long getCurrentCycleNumber();
+	long getCurrentCycleNumber ();
 
-	InputQueue getInputQueue();
+	InputQueue getInputQueue ();
 
-	boolean isBroken();
+	boolean isBroken ();
 
 }

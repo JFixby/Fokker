@@ -2,8 +2,7 @@
 package com.jfixby.r3.fokker.render.raster;
 
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.jfixby.r3.fokker.api.RasterData;
-import com.jfixby.rana.api.asset.AssetsGroup;
+import com.jfixby.rana.api.AssetsGroup;
 import com.jfixby.scarabei.api.assets.ID;
 
 public class RedFokkerRasterData implements RasterData {

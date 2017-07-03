@@ -1,8 +1,6 @@
 
 package com.jfixby.r3.fokker.api;
 
-import com.jfixby.r3.api.render.BLEND_MODE;
-import com.jfixby.r3.api.screen.CameraProjection;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.color.Color;
 import com.jfixby.scarabei.api.floatn.ReadOnlyFloat2;

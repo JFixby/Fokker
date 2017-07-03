@@ -8,7 +8,7 @@ import com.jfixby.r3.api.ui.unit.raster.Raster;
 import com.jfixby.r3.api.ui.unit.raster.RasterComponentsFactory;
 import com.jfixby.r3.api.ui.unit.raster.RasterPool;
 import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
-import com.jfixby.r3.fokker.api.RasterData;
+import com.jfixby.r3.fokker.render.raster.RasterData;
 import com.jfixby.r3.fokker.unit.raster.RedTile;
 import com.jfixby.r3.fokker.unit.raster.RedTilesComposition;
 import com.jfixby.r3.fokker.unit.raster.TileSet;

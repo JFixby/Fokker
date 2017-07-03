@@ -3,8 +3,8 @@ package com.jfixby.r3.fokker.render;
 
 import java.io.IOException;
 
-import com.jfixby.r3.api.EngineParams;
 import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
+import com.jfixby.r3.fokker.api.FokkerEngineParams;
 import com.jfixby.rana.api.asset.AssetsConsumer;
 import com.jfixby.rana.api.asset.AssetsManager;
 import com.jfixby.rana.api.asset.LoadedAssets;
@@ -80,9 +80,9 @@ public class RedFokkerRasterManager implements AssetsConsumer {
 
 // this.loadSystemAsset(FOKKER_SYSTEM_ASSETS.SHADER_TEST);
 
-		SystemSettings.setSystemAssetID(EngineParams.Assets.RASTER_IS_MISING, FOKKER_SYSTEM_ASSETS.RASTER_IS_MISING);
-		SystemSettings.setSystemAssetID(EngineParams.Assets.SPRITE_BLACK, FOKKER_SYSTEM_ASSETS.BLACK);
-		SystemSettings.setSystemAssetID(EngineParams.Assets.SPRITE_BLACK_DEBUG, FOKKER_SYSTEM_ASSETS.DEBUG_BLACK);
+		SystemSettings.setSystemAssetID(FokkerEngineParams.Assets.RASTER_IS_MISING, FOKKER_SYSTEM_ASSETS.RASTER_IS_MISING);
+		SystemSettings.setSystemAssetID(FokkerEngineParams.Assets.SPRITE_BLACK, FOKKER_SYSTEM_ASSETS.BLACK);
+		SystemSettings.setSystemAssetID(FokkerEngineParams.Assets.SPRITE_BLACK_DEBUG, FOKKER_SYSTEM_ASSETS.DEBUG_BLACK);
 
 	}
 

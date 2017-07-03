@@ -13,10 +13,10 @@ dependencies{
     //compile project(":red-triplane-api")
     //compile project(":red-triplane-ui-api")
     
-    compile "com.github.RedTriplane.RedTriplane:red-triplane-api:$r3Version"
-    compile "com.github.RedTriplane.RedTriplane:red-triplane-ui-api:$r3Version"
+    //compile "com.github.RedTriplane.RedTriplane:red-triplane-api:$r3Version"
+    //compile "com.github.RedTriplane.RedTriplane:red-triplane-ui-api:$r3Version"
 
-	compile "com.github.RedTriplane.Rana:rana-loader-api:$ranaVersion"
+	//compile "com.github.RedTriplane.Rana:rana-loader-api:$ranaVersion"
 }
 
 

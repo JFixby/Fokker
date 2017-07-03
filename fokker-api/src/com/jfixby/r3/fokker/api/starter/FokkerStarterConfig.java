@@ -23,7 +23,6 @@ public class FokkerStarterConfig {
 
 	public void print () {
 		Collections.newMap(this.params).print("FokkerStarterConfig");
-		;
 	}
 
 }

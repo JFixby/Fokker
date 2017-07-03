@@ -1,10 +1,10 @@
 
 package com.jfixby.r3.fokker.render;
 
-import com.jfixby.r3.api.EngineParams.Assets;
-import com.jfixby.r3.api.render.BLEND_MODE;
-import com.jfixby.r3.api.screen.CameraProjection;
+import com.jfixby.r3.fokker.api.BLEND_MODE;
+import com.jfixby.r3.fokker.api.CameraProjection;
 import com.jfixby.r3.fokker.api.FokkerDrawable;
+import com.jfixby.r3.fokker.api.FokkerEngineParams.Assets;
 import com.jfixby.r3.fokker.api.FokkerShader;
 import com.jfixby.r3.fokker.api.FokkerString;
 import com.jfixby.r3.fokker.api.RenderMachineComponent;

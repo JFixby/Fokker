@@ -3,12 +3,12 @@ package com.jfixby.r3.fokker.render.raster;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
-import com.jfixby.r3.api.render.BLEND_MODE;
-import com.jfixby.r3.api.screen.Screen;
 import com.jfixby.r3.api.shader.FOKKER_SHADER_PARAMS;
 import com.jfixby.r3.api.shader.Shader;
 import com.jfixby.r3.api.shader.ShaderParameter;
+import com.jfixby.r3.fokker.api.BLEND_MODE;
 import com.jfixby.r3.fokker.api.FokkerShader;
+import com.jfixby.r3.fokker.api.Screen;
 import com.jfixby.r3.fokker.render.GdxRender;
 import com.jfixby.scarabei.api.collections.Mapping;
 import com.jfixby.scarabei.api.err.Err;
