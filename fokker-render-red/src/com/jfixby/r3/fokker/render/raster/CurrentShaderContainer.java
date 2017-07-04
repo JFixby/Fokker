@@ -4,7 +4,7 @@ package com.jfixby.r3.fokker.render.raster;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.jfixby.r3.fokker.api.BLEND_MODE;
-import com.jfixby.r3.fokker.assets.api.shader.FokkerShaderHandler;
+import com.jfixby.r3.fokker.assets.api.shader.FokkerShader;
 import com.jfixby.r3.fokker.assets.api.shader.ShaderParameters;
 import com.jfixby.r3.fokker.render.GdxRender;
 import com.jfixby.scarabei.api.err.Err;
@@ -13,7 +13,7 @@ public class CurrentShaderContainer {
 	private ShaderProgram gdx_shader_program;
 	private Texture blend_texture;
 	// private Texture test_blend_texture;
-	private FokkerShaderHandler fokker_shader;
+	private FokkerShader fokker_shader;
 // private Mapping<String, ShaderParameter> params;
 	private BLEND_MODE current_mode;
 
@@ -24,13 +24,13 @@ public class CurrentShaderContainer {
 		// test_blend_texture = new Texture(gdx_file);
 	}
 
-	public void setShader (final BLEND_MODE next_blend_mode, final FokkerShaderHandler shader, final Texture blend_texture) {
+	public void setShader (final BLEND_MODE next_blend_mode, final FokkerShader shader, final Texture blend_texture) {
 		this.blend_texture = blend_texture;
 		// this.blend_texture = this.test_blend_texture;
 		this.fokker_shader = shader;
 		this.current_mode = next_blend_mode;
 
-		if (!(shader instanceof FokkerShaderHandler)) {
+		if (!(shader instanceof FokkerShader)) {
 			Err.reportError("FokkerShader required. This is not a FokkerShader: " + shader);
 		}
 		this.fokker_shader = shader;

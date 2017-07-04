@@ -15,8 +15,8 @@ import com.badlogic.gdx.utils.NumberUtils;
 import com.jfixby.r3.fokker.api.FokkerString;
 import com.jfixby.r3.fokker.api.Screen;
 import com.jfixby.r3.fokker.api.SpritesRenderer;
-import com.jfixby.r3.fokker.assets.api.raster.FokkerRaster;
-import com.jfixby.r3.fokker.assets.api.raster.FokkerRasterHandler;
+import com.jfixby.r3.fokker.assets.api.raster.FokkerTextures;
+import com.jfixby.r3.fokker.assets.api.raster.FokkerTexture;
 import com.jfixby.r3.fokker.render.GdxRender;
 import com.jfixby.rana.api.asset.AssetsConsumer;
 import com.jfixby.rana.api.asset.LoadedAssets;
@@ -105,7 +105,7 @@ public class FokkerSpritesRenderer extends SpritesRenderer implements AssetsCons
 			return;
 		}
 
-		final FokkerRasterHandler raster = FokkerRaster.obtain(spriteAssetID);
+		final FokkerTexture raster = FokkerTextures.obtain(spriteAssetID);
 		if (raster == null) {
 			LoadedAssets.printAllLoadedAssets();
 			Err.reportError("Asset<" + spriteAssetID + "> not found");

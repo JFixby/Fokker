@@ -5,8 +5,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.jfixby.r3.fokker.api.BLEND_MODE;
 import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
 import com.jfixby.r3.fokker.api.FokkerString;
+import com.jfixby.r3.fokker.assets.api.shader.FokkerShaders;
 import com.jfixby.r3.fokker.assets.api.shader.FokkerShader;
-import com.jfixby.r3.fokker.assets.api.shader.FokkerShaderHandler;
 import com.jfixby.r3.fokker.assets.api.shader.ShaderParameters;
 import com.jfixby.r3.fokker.render.FokkerRenderMachine;
 import com.jfixby.r3.fokker.render.GdxRender;
@@ -57,7 +57,7 @@ public class FokkerRasterRenderer extends Renderer {
 
 	boolean shaderIsOverlay = false;
 
-	public void open (final BLEND_MODE blend_mode, final double opacity, final FokkerShaderHandler shader,
+	public void open (final BLEND_MODE blend_mode, final double opacity, final FokkerShader shader,
 		final ShaderParameters params) {
 		this.mode = blend_mode;
 		this.current_opacity = opacity;
@@ -74,7 +74,7 @@ public class FokkerRasterRenderer extends Renderer {
 		super.open();
 	}
 
-	public void close (final BLEND_MODE blend_mode, final FokkerShaderHandler shader) {
+	public void close (final BLEND_MODE blend_mode, final FokkerShader shader) {
 		this.current_opacity = 1;
 		if (this.mode != blend_mode) {
 			Err.reportError("Unexpected BLEND_MODE: " + blend_mode);
@@ -126,7 +126,7 @@ public class FokkerRasterRenderer extends Renderer {
 		this.sprites_renderer.drawString(string_value, shape, this.current_opacity, blend_texture);
 	}
 
-	final void loadOverlayShader (final BLEND_MODE next_blend_mode, final double opacity, final FokkerShaderHandler customShader,
+	final void loadOverlayShader (final BLEND_MODE next_blend_mode, final double opacity, final FokkerShader customShader,
 		final ShaderParameters params) {
 		if (this.secondary_buffer == null) {
 			this.secondary_buffer = new SecondaryRenderBuffer();
@@ -141,7 +141,7 @@ public class FokkerRasterRenderer extends Renderer {
 		this.secondary_buffer.end();
 		this.primary_buffer.resume();
 
-		final FokkerShaderHandler shader = this.shaderFor(next_blend_mode, customShader);
+		final FokkerShader shader = this.shaderFor(next_blend_mode, customShader);
 		final Texture blend_texture = this.secondary_buffer.getResult();
 		this.current_shader.setShader(next_blend_mode, shader, blend_texture);
 
@@ -155,9 +155,9 @@ public class FokkerRasterRenderer extends Renderer {
 		this.current_shader.deactivateShader();
 	}
 
-	final void loadTextureShader (final BLEND_MODE next_blend_mode, final double opacity, final FokkerShaderHandler customShader,
+	final void loadTextureShader (final BLEND_MODE next_blend_mode, final double opacity, final FokkerShader customShader,
 		final ShaderParameters params) {
-		final FokkerShaderHandler shader = this.shaderFor(next_blend_mode, customShader);
+		final FokkerShader shader = this.shaderFor(next_blend_mode, customShader);
 		this.current_shader.setShader(next_blend_mode, shader, null);
 
 		// texture.bind(1);
@@ -169,7 +169,7 @@ public class FokkerRasterRenderer extends Renderer {
 		this.current_shader.deactivateShader();
 	}
 
-	private FokkerShaderHandler shaderFor (final BLEND_MODE blend_mode, final FokkerShaderHandler customShader) {
+	private FokkerShader shaderFor (final BLEND_MODE blend_mode, final FokkerShader customShader) {
 		if (blend_mode == null) {
 			return customShader;
 		}
@@ -177,16 +177,16 @@ public class FokkerRasterRenderer extends Renderer {
 			Err.reportError("Wrong BLEND_MODE = " + blend_mode);
 		}
 		if (blend_mode == BLEND_MODE.TEST) {
-			return FokkerShader.obtain(FOKKER_SYSTEM_ASSETS.SHADER_TEST);
+			return FokkerShaders.obtain(FOKKER_SYSTEM_ASSETS.SHADER_TEST);
 		}
 		if (blend_mode == BLEND_MODE.Normal) {
-			return FokkerShader.obtain(FOKKER_SYSTEM_ASSETS.SHADER_NORMAL);
+			return FokkerShaders.obtain(FOKKER_SYSTEM_ASSETS.SHADER_NORMAL);
 		}
 		if (blend_mode == BLEND_MODE.Multiply) {
-			return FokkerShader.obtain(FOKKER_SYSTEM_ASSETS.SHADER_MULTIPLY);
+			return FokkerShaders.obtain(FOKKER_SYSTEM_ASSETS.SHADER_MULTIPLY);
 		}
 		if (blend_mode == BLEND_MODE.Grayscale) {
-			return FokkerShader.obtain(FOKKER_SYSTEM_ASSETS.SHADER_GRAYSCALE);
+			return FokkerShaders.obtain(FOKKER_SYSTEM_ASSETS.SHADER_GRAYSCALE);
 		}
 		Err.reportError("Unknown BLEND_MODE=" + blend_mode);
 		return null;
