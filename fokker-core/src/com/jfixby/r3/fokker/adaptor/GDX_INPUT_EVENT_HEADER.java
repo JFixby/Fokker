@@ -1,7 +1,0 @@
-
-package com.jfixby.r3.fokker.adaptor;
-
-public enum GDX_INPUT_EVENT_HEADER {
-	KEY_DOWN, KEY_UP, SCROLLED, MOUSE_MOVED, TOUCH_DRAGGED, TOUCH_UP, TOUCH_DOWN, KEY_TYPED
-
-}

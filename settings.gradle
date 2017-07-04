@@ -1,19 +1,25 @@
-include 'fokker-api'
-include 'fokker-core'
+include "fokker-desktop-api"
+include "fokker-ios-api"
+include "fokker-android-api"
+include "fokker-gwt-api"
+
+include "fokker-engine-api"
+
+include "fokker-texture-api"
+include "fokker-shader-api"
+include "fokker-font-api"
 
 include 'fokker-render-api'
+include 'fokker-api'
+
+
+include 'fokker-core'
 include 'fokker-render-red'
-
 include 'fokker-raster-api'
 include 'fokker-raster-api'
-
 //include 'fokker-ui'
-
-
 //include 'fokker-font-api'
 //include 'fokker-font-api'
-
-
 include 'fokker-desktop'
 include 'fokker-android'
 //include 'fokker-ios'
