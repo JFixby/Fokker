@@ -1,18 +1,18 @@
 
 package com.jfixby.r3.fokker.unit.cam;
 
-import com.jfixby.r3.api.EngineParams.Assets;
-import com.jfixby.r3.api.screen.Screen;
-import com.jfixby.r3.api.screen.ScreenDimentions;
 import com.jfixby.r3.api.ui.unit.ComponentsFactory;
 import com.jfixby.r3.api.ui.unit.LayerBasedComponent;
 import com.jfixby.r3.api.ui.unit.camera.Camera;
-import com.jfixby.r3.api.ui.unit.camera.CameraManager;
 import com.jfixby.r3.api.ui.unit.camera.CameraSpecs;
+import com.jfixby.r3.api.ui.unit.camera.ScreenDimentions;
 import com.jfixby.r3.api.ui.unit.camera.Shadow;
 import com.jfixby.r3.api.ui.unit.camera.ShadowSpecs;
 import com.jfixby.r3.api.ui.unit.layer.Layer;
 import com.jfixby.r3.api.ui.unit.raster.Tile;
+import com.jfixby.r3.api.ui.unit.user.CameraManager;
+import com.jfixby.r3.fokker.api.FokkerEngineParams.Assets;
+import com.jfixby.r3.fokker.api.Screen;
 import com.jfixby.scarabei.api.geometry.ORIGIN_RELATIVE_HORIZONTAL;
 import com.jfixby.scarabei.api.geometry.ORIGIN_RELATIVE_VERTICAL;
 import com.jfixby.scarabei.api.math.FloatMath;

@@ -15,8 +15,9 @@ import com.badlogic.gdx.utils.NumberUtils;
 import com.jfixby.r3.fokker.api.FokkerString;
 import com.jfixby.r3.fokker.api.Screen;
 import com.jfixby.r3.fokker.api.SpritesRenderer;
+import com.jfixby.r3.fokker.assets.api.raster.FokkerRaster;
+import com.jfixby.r3.fokker.assets.api.raster.FokkerRasterHandler;
 import com.jfixby.r3.fokker.render.GdxRender;
-import com.jfixby.rana.api.asset.AssetHandler;
 import com.jfixby.rana.api.asset.AssetsConsumer;
 import com.jfixby.rana.api.asset.LoadedAssets;
 import com.jfixby.scarabei.api.assets.ID;
@@ -104,14 +105,13 @@ public class FokkerSpritesRenderer extends SpritesRenderer implements AssetsCons
 			return;
 		}
 
-		final AssetHandler asset_info = LoadedAssets.component().useAsset(spriteAssetID);
-		if (asset_info == null) {
+		final FokkerRasterHandler raster = FokkerRaster.obtain(spriteAssetID);
+		if (raster == null) {
 			LoadedAssets.printAllLoadedAssets();
 			Err.reportError("Asset<" + spriteAssetID + "> not found");
 		}
 
-		final RedFokkerRasterData raster_data = (RedFokkerRasterData)asset_info.asset();
-		final com.badlogic.gdx.graphics.g2d.Sprite gdx_sprite = raster_data.getGdxSprite();
+		final com.badlogic.gdx.graphics.g2d.Sprite gdx_sprite = raster.getGdxSprite();
 		final Texture alpha_texture = null;
 		// Debug.checkNull("asset(" + spriteAssetID + ")", gdx_sprite);
 

@@ -3,23 +3,18 @@ package com.jfixby.r3.fokker.render.raster;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
-import com.jfixby.r3.api.shader.FOKKER_SHADER_PARAMS;
-import com.jfixby.r3.api.shader.Shader;
-import com.jfixby.r3.api.shader.ShaderParameter;
 import com.jfixby.r3.fokker.api.BLEND_MODE;
-import com.jfixby.r3.fokker.api.FokkerShader;
-import com.jfixby.r3.fokker.api.Screen;
+import com.jfixby.r3.fokker.assets.api.shader.FokkerShaderHandler;
+import com.jfixby.r3.fokker.assets.api.shader.ShaderParameters;
 import com.jfixby.r3.fokker.render.GdxRender;
-import com.jfixby.scarabei.api.collections.Mapping;
 import com.jfixby.scarabei.api.err.Err;
 
 public class CurrentShaderContainer {
 	private ShaderProgram gdx_shader_program;
 	private Texture blend_texture;
 	// private Texture test_blend_texture;
-	private Shader shader;
-	private FokkerShader fokker_shader;
-	private Mapping<String, ShaderParameter> params;
+	private FokkerShaderHandler fokker_shader;
+// private Mapping<String, ShaderParameter> params;
 	private BLEND_MODE current_mode;
 
 	void init () {
@@ -29,40 +24,40 @@ public class CurrentShaderContainer {
 		// test_blend_texture = new Texture(gdx_file);
 	}
 
-	public void setShader (final BLEND_MODE next_blend_mode, final Shader shader, final Texture blend_texture) {
+	public void setShader (final BLEND_MODE next_blend_mode, final FokkerShaderHandler shader, final Texture blend_texture) {
 		this.blend_texture = blend_texture;
 		// this.blend_texture = this.test_blend_texture;
-		this.shader = shader;
+		this.fokker_shader = shader;
 		this.current_mode = next_blend_mode;
 
-		if (!(shader instanceof FokkerShader)) {
+		if (!(shader instanceof FokkerShaderHandler)) {
 			Err.reportError("FokkerShader required. This is not a FokkerShader: " + shader);
 		}
-		this.fokker_shader = (FokkerShader)shader;
+		this.fokker_shader = shader;
 
 		this.gdx_shader_program = this.fokker_shader.getGdxShaderProgram();
-		this.params = shader.listParameters();
+// this.params = shader.listParameters();
 
 // this.setupShaderValues(1.0f);
 	}
 
-	public void activateShader (final double opacity) {
+	public void activateShader (final double opacity, final ShaderParameters params) {
 		// params.print("params");
 // Debug.checkTrue("" + this.params, this.params.size() >= 6);
-		this.setupShaderValues(opacity);
+		this.setupShaderValues(opacity, params);
 		GdxRender.setShader(this.gdx_shader_program);
 
 	}
 
-	private void setupShaderValues (final double opacity) {
-		this.shader.setFloatParameterValue(FOKKER_SHADER_PARAMS.SCREEN_WIDTH.name, Screen.getScreenWidth());
-		this.shader.setFloatParameterValue(FOKKER_SHADER_PARAMS.SCREEN_HEIGHT.name, Screen.getScreenHeight());
-		this.shader.setFloatParameterValue(FOKKER_SHADER_PARAMS.ALPHA_BLEND.name, opacity);
-		this.shader.setIntParameterValue(FOKKER_SHADER_PARAMS.U_TEXTURE_0_CURRENT.name, 0);
-		this.shader.setIntParameterValue(FOKKER_SHADER_PARAMS.U_TEXTURE_1_ORIGINAL.name, 1);
-		this.shader.setIntParameterValue(FOKKER_SHADER_PARAMS.U_TEXTURE_2_ALPHA.name, 2);
-
-		this.shader.setupValues();
+	private void setupShaderValues (final double opacity, final ShaderParameters params) {
+// this.shader.setFloatParameterValue(FOKKER_SHADER_PARAMS.SCREEN_WIDTH.name, Screen.getScreenWidth());
+// this.shader.setFloatParameterValue(FOKKER_SHADER_PARAMS.SCREEN_HEIGHT.name, Screen.getScreenHeight());
+// this.shader.setFloatParameterValue(FOKKER_SHADER_PARAMS.ALPHA_BLEND.name, opacity);
+// this.shader.setIntParameterValue(FOKKER_SHADER_PARAMS.U_TEXTURE_0_CURRENT.name, 0);
+// this.shader.setIntParameterValue(FOKKER_SHADER_PARAMS.U_TEXTURE_1_ORIGINAL.name, 1);
+// this.shader.setIntParameterValue(FOKKER_SHADER_PARAMS.U_TEXTURE_2_ALPHA.name, 2);
+		this.fokker_shader.applyParameters(params);
+		this.fokker_shader.setOpacity(opacity);
 	}
 
 	public void deactivateShader () {

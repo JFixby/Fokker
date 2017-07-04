@@ -1,6 +1,7 @@
 
 package com.jfixby.r3.fokker.api;
 
+import com.jfixby.r3.fokker.assets.api.shader.ShaderParameters;
 import com.jfixby.scarabei.api.ComponentInstaller;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.color.Color;
@@ -100,11 +101,11 @@ public class RenderMachine {
 		invoke().drawString(string_value, position);
 	}
 
-	public static void beginShaderMode (final FokkerShader fokkerShader) {
-		invoke().beginShaderMode(fokkerShader);
+	public static void beginShaderMode (final ID fokkerShader, final ShaderParameters params) {
+		invoke().beginShaderMode(fokkerShader, params);
 	}
 
-	public static void endShaderMode (final FokkerShader fokkerShader) {
+	public static void endShaderMode (final ID fokkerShader) {
 		invoke().endShaderMode(fokkerShader);
 	}
 

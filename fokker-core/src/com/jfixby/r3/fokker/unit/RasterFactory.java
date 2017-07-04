@@ -1,20 +1,20 @@
 
 package com.jfixby.r3.fokker.unit;
 
-import com.jfixby.r3.api.EngineParams.Settings;
 import com.jfixby.r3.api.ui.unit.raster.GraphicalConsole;
 import com.jfixby.r3.api.ui.unit.raster.GraphicalConsoleSpecs;
 import com.jfixby.r3.api.ui.unit.raster.Raster;
 import com.jfixby.r3.api.ui.unit.raster.RasterComponentsFactory;
 import com.jfixby.r3.api.ui.unit.raster.RasterPool;
 import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
+import com.jfixby.r3.fokker.api.FokkerEngineParams.Settings;
 import com.jfixby.r3.fokker.render.raster.RasterData;
 import com.jfixby.r3.fokker.unit.raster.RedTile;
 import com.jfixby.r3.fokker.unit.raster.RedTilesComposition;
 import com.jfixby.r3.fokker.unit.raster.TileSet;
 import com.jfixby.r3.fokker.unit.raster.log.RedGraphicalConsole;
 import com.jfixby.r3.fokker.unit.raster.log.RedGraphicalConsoleSpecs;
-import com.jfixby.rana.api.asset.Asset;
+import com.jfixby.rana.api.Asset;
 import com.jfixby.rana.api.asset.AssetHandler;
 import com.jfixby.rana.api.asset.LoadedAssets;
 import com.jfixby.scarabei.api.assets.ID;

@@ -4,7 +4,7 @@ package com.jfixby.r3.fokker.unit;
 import java.util.ArrayList;
 
 import com.badlogic.gdx.graphics.FPSLogger;
-import com.jfixby.r3.api.screen.CameraProjection;
+import com.jfixby.r3.fokker.api.CameraProjection;
 import com.jfixby.r3.fokker.api.FokkerDrawable;
 import com.jfixby.r3.fokker.api.RenderMachine;
 import com.jfixby.r3.fokker.unit.cam.RedCamera;
@@ -18,7 +18,6 @@ import com.jfixby.scarabei.api.geometry.projections.Projection;
 import com.jfixby.scarabei.api.geometry.projections.ProjectionsStack;
 import com.jfixby.scarabei.api.sys.settings.ExecutionMode;
 import com.jfixby.scarabei.api.sys.settings.SystemSettings;
-import com.jfixby.scarabei.red.geometry.RedProjectionsStack;
 
 public class RedLayerRenderer {
 

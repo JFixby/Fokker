@@ -1,13 +1,13 @@
 
 package com.jfixby.r3.fokker.unit.shader;
 
-import com.jfixby.r3.api.EngineParams.Settings;
-import com.jfixby.r3.api.shader.ShaderAsset;
 import com.jfixby.r3.api.ui.unit.ComponentsFactory;
 import com.jfixby.r3.api.ui.unit.shader.ShaderComponent;
 import com.jfixby.r3.api.ui.unit.shader.ShaderFactory;
 import com.jfixby.r3.api.ui.unit.shader.ShaderSpecs;
 import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
+import com.jfixby.r3.fokker.api.FokkerEngineParams;
+import com.jfixby.r3.fokker.assets.api.shader.ShaderAsset;
 import com.jfixby.r3.fokker.unit.RedComponentsFactory;
 import com.jfixby.rana.api.asset.AssetHandler;
 import com.jfixby.scarabei.api.assets.ID;
@@ -43,8 +43,9 @@ public class RedShadersFactory implements ShaderFactory {
 	}
 
 	private AssetHandler obtainShader (final ID newAssetID) {
-		return this.redComponentsFactory.obtainAsset(newAssetID, SystemSettings.getFlag(Settings.AllowMissingShader),
-			FOKKER_SYSTEM_ASSETS.SHADER_GRAYSCALE, SystemSettings.getFlag(Settings.PrintLogMessageOnMissingShader));
+		return this.redComponentsFactory.obtainAsset(newAssetID,
+			SystemSettings.getFlag(FokkerEngineParams.Settings.AllowMissingShader), FOKKER_SYSTEM_ASSETS.SHADER_GRAYSCALE,
+			SystemSettings.getFlag(FokkerEngineParams.Settings.PrintLogMessageOnMissingShader));
 	}
 
 	@Override

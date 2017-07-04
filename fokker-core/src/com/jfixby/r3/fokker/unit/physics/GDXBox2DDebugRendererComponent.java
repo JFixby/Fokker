@@ -139,7 +139,7 @@ public class GDXBox2DDebugRendererComponent implements VisibleComponent, Drawabl
 		final Box2DTransform transform = body.getTransform();
 		for (final Fixture fixture : body.getFixtureList()) {
 			if (this.drawBodies) {
-				final Float2 position = body.getPosition();
+				final Float2 position = body.position();
 				this.drawShape(fixture, transform, this.getColorByBody(body, world_to_render));
 				if (this.drawVelocities) {
 
@@ -171,7 +171,7 @@ public class GDXBox2DDebugRendererComponent implements VisibleComponent, Drawabl
 
 		if (fixture.getType() == ShapeType.Circle) {
 			final CircleShape circle = (CircleShape)fixture.getShape();
-			final ReadOnlyFloat2 position = circle.getPosition();
+			final ReadOnlyFloat2 position = circle.position();
 			this.tmp1.set(position);
 			transform.transform(this.tmp1);
 

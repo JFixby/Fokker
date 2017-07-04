@@ -1,7 +1,7 @@
 
 package com.jfixby.r3.fokker.unit.cam;
 
-import com.jfixby.r3.api.screen.CameraProjection;
+import com.jfixby.r3.fokker.api.CameraProjection;
 import com.jfixby.scarabei.api.floatn.Float2;
 import com.jfixby.scarabei.api.geometry.Geometry;
 import com.jfixby.scarabei.api.geometry.projections.Projection;

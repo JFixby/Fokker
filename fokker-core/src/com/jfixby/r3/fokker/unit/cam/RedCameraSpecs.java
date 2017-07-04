@@ -1,9 +1,9 @@
 
 package com.jfixby.r3.fokker.unit.cam;
 
-import com.jfixby.r3.api.ui.unit.camera.CameraManager;
 import com.jfixby.r3.api.ui.unit.camera.CameraSpecs;
 import com.jfixby.r3.api.ui.unit.camera.SIMPLE_CAMERA_POLICY;
+import com.jfixby.r3.api.ui.unit.user.CameraManager;
 
 public class RedCameraSpecs implements CameraSpecs {
 

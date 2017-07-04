@@ -1,9 +1,9 @@
 
 package com.jfixby.r3.fokker.unit.layers;
 
-import com.jfixby.r3.api.screen.Screen;
-import com.jfixby.r3.api.screen.ScreenDimentionsChecker;
 import com.jfixby.r3.api.ui.unit.user.ScreenChangeListener;
+import com.jfixby.r3.fokker.api.Screen;
+import com.jfixby.r3.fokker.api.ScreenDimentionsChecker;
 import com.jfixby.scarabei.api.err.Err;
 
 public class ScreenDimentionsUpdate {
@@ -44,9 +44,12 @@ public class ScreenDimentionsUpdate {
 			Err.throwNotImplementedYet();
 		}
 		if (this.checker.screenDimentionsHaveChanged()) {
-			this.listener.onScreenChanged(Screen.getScreenDimensions());
+			this.holder.updateScreenDimentions();
+			this.listener.onScreenChanged(this.holder);
 			this.checker.okGotIt();
 		}
 	}
+
+	final ScreenDimentionsHolder holder = new ScreenDimentionsHolder();
 
 }

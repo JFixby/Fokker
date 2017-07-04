@@ -3,18 +3,19 @@ package com.jfixby.r3.fokker.unit.cam;
 
 import java.util.ArrayList;
 
-import com.jfixby.r3.api.EngineParams.Assets;
-import com.jfixby.r3.api.render.BLEND_MODE;
-import com.jfixby.r3.api.screen.CameraProjection;
-import com.jfixby.r3.api.screen.Screen;
-import com.jfixby.r3.api.screen.ScreenDimentionsChecker;
 import com.jfixby.r3.api.ui.unit.camera.Camera;
-import com.jfixby.r3.api.ui.unit.camera.CameraManager;
 import com.jfixby.r3.api.ui.unit.camera.CameraSpecs;
 import com.jfixby.r3.api.ui.unit.camera.SIMPLE_CAMERA_POLICY;
+import com.jfixby.r3.api.ui.unit.user.CameraManager;
+import com.jfixby.r3.fokker.api.BLEND_MODE;
+import com.jfixby.r3.fokker.api.CameraProjection;
+import com.jfixby.r3.fokker.api.FokkerEngineParams.Assets;
 import com.jfixby.r3.fokker.api.RenderMachine;
+import com.jfixby.r3.fokker.api.Screen;
+import com.jfixby.r3.fokker.api.ScreenDimentionsChecker;
 import com.jfixby.r3.fokker.unit.RedComponentsFactory;
 import com.jfixby.r3.fokker.unit.geo.RedRectangleComponent;
+import com.jfixby.r3.fokker.unit.layers.ScreenDimentionsHolder;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.color.Colors;
 import com.jfixby.scarabei.api.err.Err;
@@ -80,6 +81,8 @@ public class RedCamera implements Camera, CameraProjection, Projection {
 		this.debug_component.setDebugRenderFlag(true);
 	}
 
+	final ScreenDimentionsHolder holder = new ScreenDimentionsHolder();
+
 	public void checkScreenDimentions () {
 		if (this.checker.screenDimentionsHaveChanged()) {
 			this.scren_area.setWidth(Screen.getScreenWidth());
@@ -88,7 +91,8 @@ public class RedCamera implements Camera, CameraProjection, Projection {
 			this.flagProjectionAndApertureUpdateNeeded();
 
 			if (this.manager != null) {
-				this.manager.onScreenUpdate(Screen.getScreenDimensions(), this);
+				this.holder.updateScreenDimentions();
+				this.manager.onScreenUpdate(this.holder, this);
 			} else {
 				if (this.policy == SIMPLE_CAMERA_POLICY.KEEP_ASPECT_RATIO_ON_SCREEN_RESIZE) {
 				} else if (this.policy == SIMPLE_CAMERA_POLICY.EXPAND_CAMERA_VIEWPORT_ON_SCREEN_RESIZE) {
@@ -385,7 +389,6 @@ public class RedCamera implements Camera, CameraProjection, Projection {
 		return this.zoom;
 	}
 
-	@Override
 	public CameraProjection getCameraProjection () {
 		return this;
 	}

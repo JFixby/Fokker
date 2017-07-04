@@ -2,14 +2,14 @@
 package com.jfixby.r3.fokker.unit.anim;
 
 import com.jfixby.r3.api.ui.unit.animation.PositionAnchor;
-import com.jfixby.scarabei.red.geometry.RedPosition;
 
-public class RedAnimationAnchor extends RedPosition implements PositionAnchor {
+public class RedAnimationAnchor implements PositionAnchor {
 
 	final private long timestamp;
 
 	public RedAnimationAnchor (final long time_stamp) {
 		this.timestamp = time_stamp;
+
 	}
 
 	@Override

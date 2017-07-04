@@ -7,8 +7,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.Matrix4;
-import com.jfixby.r3.api.shader.Shader;
-import com.jfixby.r3.fokker.api.FokkerShader;
+import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
+import com.jfixby.r3.fokker.assets.api.shader.FokkerShader;
+import com.jfixby.r3.fokker.assets.api.shader.FokkerShaderHandler;
 import com.jfixby.r3.fokker.render.raster.FokkerRasterRenderer;
 import com.jfixby.scarabei.api.color.Color;
 import com.jfixby.scarabei.api.err.Err;
@@ -29,9 +30,9 @@ public class GdxRender {
 	public static void init (final FokkerRasterRenderer raster_renderer) {
 		shadersProvider = raster_renderer;
 		if (gdx_sprite_batch == null) {
-			final Shader defaultShader = shadersProvider.getDefaultGdxShader();
-			final FokkerShader fokker_shader = (FokkerShader)defaultShader;
-			final ShaderProgram gdxDefaultShader = fokker_shader.getGdxShaderProgram();
+
+			final FokkerShaderHandler defaultShader = FokkerShader.obtain(FOKKER_SYSTEM_ASSETS.SHADER_GDX_DEFAULT);
+			final ShaderProgram gdxDefaultShader = defaultShader.getGdxShaderProgram();
 			gdx_sprite_batch = new com.badlogic.gdx.graphics.g2d.SpriteBatch(1000, gdxDefaultShader);
 		}
 		// frame_buffer = new RenderBuffer();

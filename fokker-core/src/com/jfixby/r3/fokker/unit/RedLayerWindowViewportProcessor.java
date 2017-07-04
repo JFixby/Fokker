@@ -1,7 +1,6 @@
 
 package com.jfixby.r3.fokker.unit;
 
-import com.jfixby.r3.api.ui.unit.user.ScreenChangeListener;
 import com.jfixby.r3.fokker.unit.cam.RedCamera;
 import com.jfixby.r3.fokker.unit.layers.RedLayer;
 import com.jfixby.r3.fokker.unit.layers.ScreenDimentionsUpdate;

@@ -71,8 +71,9 @@ public class FokkerUnitsMachine implements UnitsMachineComponent, UnitsMachineEx
 
 		RenderMachine.init();
 
-		RedTriplane.getGameStarter().onGameStart();
-
+		final ID starter = RedTriplane.getGameStarter();
+		final Intent intent = UnitsMachine.newIntent(starter);
+		this.nextUnit(intent);
 // L.d("Screen dimensions", Screen.getScreenDimensions());
 
 	}

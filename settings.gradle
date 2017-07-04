@@ -4,6 +4,9 @@ include 'fokker-core'
 include 'fokker-render-api'
 include 'fokker-render-red'
 
+include 'fokker-raster-api'
+include 'fokker-raster-api'
+
 //include 'fokker-ui'
 
 

@@ -3,7 +3,6 @@ package com.jfixby.r3.fokker.unit.input;
 
 import java.util.ArrayList;
 
-import com.jfixby.r3.api.input.InputEvent;
 import com.jfixby.r3.api.ui.unit.input.CharTypedEvent;
 import com.jfixby.r3.api.ui.unit.input.KeyDownEvent;
 import com.jfixby.r3.api.ui.unit.input.KeyUpEvent;
@@ -15,6 +14,7 @@ import com.jfixby.r3.api.ui.unit.input.TouchDraggedEvent;
 import com.jfixby.r3.api.ui.unit.input.TouchUpEvent;
 import com.jfixby.r3.api.ui.unit.user.KeyboardInputEventListener;
 import com.jfixby.r3.api.ui.unit.user.MouseInputEventListener;
+import com.jfixby.r3.fokker.api.InputEvent;
 import com.jfixby.r3.fokker.unit.cam.RedCamera;
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.err.Err;

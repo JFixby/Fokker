@@ -2,9 +2,9 @@
 package com.jfixby.r3.fokker.adaptor;
 
 import com.badlogic.gdx.Gdx;
-import com.jfixby.r3.api.input.InputQueue;
-import com.jfixby.r3.api.screen.Screen;
 import com.jfixby.r3.fokker.api.EngineState;
+import com.jfixby.r3.fokker.api.InputQueue;
+import com.jfixby.r3.fokker.api.Screen;
 import com.jfixby.r3.fokker.api.UnitsMachineExecutor;
 import com.jfixby.scarabei.api.debug.Debug;
 import com.jfixby.scarabei.api.debug.DebugTimer;

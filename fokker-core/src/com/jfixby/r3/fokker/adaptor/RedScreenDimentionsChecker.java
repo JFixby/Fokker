@@ -1,8 +1,8 @@
 
 package com.jfixby.r3.fokker.adaptor;
 
-import com.jfixby.r3.api.screen.Screen;
-import com.jfixby.r3.api.screen.ScreenDimentionsChecker;
+import com.jfixby.r3.fokker.api.Screen;
+import com.jfixby.r3.fokker.api.ScreenDimentionsChecker;
 
 public class RedScreenDimentionsChecker implements ScreenDimentionsChecker {
 
@@ -10,7 +10,7 @@ public class RedScreenDimentionsChecker implements ScreenDimentionsChecker {
 
 	@Override
 	public String toString () {
-		return "RedScreenDimentionsChecker [previous_check=" + previous_check + "]";
+		return "RedScreenDimentionsChecker [previous_check=" + this.previous_check + "]";
 	}
 
 	@Override

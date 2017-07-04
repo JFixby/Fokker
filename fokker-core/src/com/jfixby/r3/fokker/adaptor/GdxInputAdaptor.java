@@ -4,8 +4,8 @@ package com.jfixby.r3.fokker.adaptor;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.jfixby.r3.api.input.InputEvent;
-import com.jfixby.r3.api.input.InputQueue;
+import com.jfixby.r3.fokker.api.InputEvent;
+import com.jfixby.r3.fokker.api.InputQueue;
 import com.jfixby.scarabei.adopted.gdx.input.GdxKeys;
 import com.jfixby.scarabei.adopted.gdx.input.GdxMouseButtons;
 import com.jfixby.scarabei.api.collections.Collections;
@@ -14,7 +14,7 @@ import com.jfixby.scarabei.api.collections.PoolElementsSpawner;
 
 public class GdxInputAdaptor implements com.badlogic.gdx.InputProcessor, InputQueue {
 
-	private GdxAdaptor master;
+	private final GdxAdaptor master;
 	private ArrayList<InputEvent> public_queue;
 	private ArrayList<GdxInputEvent> private_queue;
 	private Pool<GdxInputEvent> pool;
@@ -33,108 +33,108 @@ public class GdxInputAdaptor implements com.badlogic.gdx.InputProcessor, InputQu
 	public void deploy () {
 		this.public_queue = new ArrayList<InputEvent>();
 		this.private_queue = new ArrayList<GdxInputEvent>();
-		this.pool = Collections.newPool(spawner);
-		enable();
+		this.pool = Collections.newPool(this.spawner);
+		this.enable();
 	}
 
-	public GdxInputAdaptor (GdxAdaptor gdxAdaptor) {
+	public GdxInputAdaptor (final GdxAdaptor gdxAdaptor) {
 		this.master = gdxAdaptor;
 	}
 
 	@Override
-	public boolean keyDown (int keycode) {
-		if (disabled) {
+	public boolean keyDown (final int keycode) {
+		if (this.disabled) {
 			return false;
 		}
-		GdxInputEvent new_event = this.pool.obtain();
+		final GdxInputEvent new_event = this.pool.obtain();
 		new_event.reset();
 		new_event.keyDown(GdxKeys.resolveGdxKeyCode(keycode));
-		enqueue(new_event);
+		this.enqueue(new_event);
 		return true;
 	}
 
 	@Override
-	public boolean keyUp (int keycode) {
-		if (disabled) {
+	public boolean keyUp (final int keycode) {
+		if (this.disabled) {
 			return false;
 		}
-		GdxInputEvent new_event = this.pool.obtain();
+		final GdxInputEvent new_event = this.pool.obtain();
 		new_event.reset();
 		new_event.keyUp(GdxKeys.resolveGdxKeyCode(keycode));
-		enqueue(new_event);
+		this.enqueue(new_event);
 		return true;
 	}
 
 	@Override
-	public boolean keyTyped (char character) {
-		if (disabled) {
+	public boolean keyTyped (final char character) {
+		if (this.disabled) {
 			return false;
 		}
-		GdxInputEvent new_event = this.pool.obtain();
+		final GdxInputEvent new_event = this.pool.obtain();
 		new_event.reset();
 		new_event.keyTyped(character);
-		enqueue(new_event);
+		this.enqueue(new_event);
 		return true;
 	}
 
 	@Override
-	public boolean touchDown (int screenX, int screenY, int pointer, int button) {
-		if (disabled) {
+	public boolean touchDown (final int screenX, final int screenY, final int pointer, final int button) {
+		if (this.disabled) {
 			return false;
 		}
-		GdxInputEvent new_event = this.pool.obtain();
+		final GdxInputEvent new_event = this.pool.obtain();
 		new_event.reset();
 		new_event.touchDown(screenX, screenY, pointer, GdxMouseButtons.resolveGdxMouseButtonCode(button));
-		enqueue(new_event);
+		this.enqueue(new_event);
 		return true;
 
 	}
 
 	@Override
-	public boolean touchUp (int screenX, int screenY, int pointer, int button) {
-		if (disabled) {
+	public boolean touchUp (final int screenX, final int screenY, final int pointer, final int button) {
+		if (this.disabled) {
 			return false;
 		}
-		GdxInputEvent new_event = this.pool.obtain();
+		final GdxInputEvent new_event = this.pool.obtain();
 		new_event.reset();
 		new_event.touchUp(screenX, screenY, pointer, GdxMouseButtons.resolveGdxMouseButtonCode(button));
-		enqueue(new_event);
+		this.enqueue(new_event);
 		return true;
 	}
 
 	@Override
-	public boolean touchDragged (int screenX, int screenY, int pointer) {
-		if (disabled) {
+	public boolean touchDragged (final int screenX, final int screenY, final int pointer) {
+		if (this.disabled) {
 			return false;
 		}
-		GdxInputEvent new_event = this.pool.obtain();
+		final GdxInputEvent new_event = this.pool.obtain();
 		new_event.reset();
 		new_event.touchDragged(screenX, screenY, pointer);
-		enqueue(new_event);
+		this.enqueue(new_event);
 		return true;
 	}
 
 	@Override
-	public boolean mouseMoved (int screenX, int screenY) {
-		if (disabled) {
+	public boolean mouseMoved (final int screenX, final int screenY) {
+		if (this.disabled) {
 			return false;
 		}
-		GdxInputEvent new_event = this.pool.obtain();
+		final GdxInputEvent new_event = this.pool.obtain();
 		new_event.reset();
 		new_event.mouseMoved(screenX, screenY);
-		enqueue(new_event);
+		this.enqueue(new_event);
 		return true;
 	}
 
 	@Override
-	public boolean scrolled (int amount) {
-		if (disabled) {
+	public boolean scrolled (final int amount) {
+		if (this.disabled) {
 			return false;
 		}
-		GdxInputEvent new_event = this.pool.obtain();
+		final GdxInputEvent new_event = this.pool.obtain();
 		new_event.reset();
 		new_event.scrolled(amount);
-		enqueue(new_event);
+		this.enqueue(new_event);
 		return true;
 	}
 
@@ -147,7 +147,7 @@ public class GdxInputAdaptor implements com.badlogic.gdx.InputProcessor, InputQu
 
 	};
 
-	private void enqueue (GdxInputEvent new_event) {
+	private void enqueue (final GdxInputEvent new_event) {
 		this.private_queue.add(new_event);
 		this.public_queue.add(new_event);
 	}
@@ -155,8 +155,8 @@ public class GdxInputAdaptor implements com.badlogic.gdx.InputProcessor, InputQu
 	int i;
 
 	public void flush () {
-		for (i = 0; i < private_queue.size(); i++) {
-			GdxInputEvent t = private_queue.get(i);
+		for (this.i = 0; this.i < this.private_queue.size(); this.i++) {
+			final GdxInputEvent t = this.private_queue.get(this.i);
 			this.pool.free(t);
 		}
 		// this.pool.freeAll(this.private_queue);

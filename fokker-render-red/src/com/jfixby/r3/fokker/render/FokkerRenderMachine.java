@@ -5,9 +5,9 @@ import com.jfixby.r3.fokker.api.BLEND_MODE;
 import com.jfixby.r3.fokker.api.CameraProjection;
 import com.jfixby.r3.fokker.api.FokkerDrawable;
 import com.jfixby.r3.fokker.api.FokkerEngineParams.Assets;
-import com.jfixby.r3.fokker.api.FokkerShader;
 import com.jfixby.r3.fokker.api.FokkerString;
 import com.jfixby.r3.fokker.api.RenderMachineComponent;
+import com.jfixby.r3.fokker.assets.api.shader.ShaderParameters;
 import com.jfixby.r3.fokker.render.geo.FokkerShapesRenderer;
 import com.jfixby.r3.fokker.render.raster.FokkerRasterRenderer;
 import com.jfixby.r3.fokker.render.shader.FokkerShaderRenderer;
@@ -220,7 +220,7 @@ public class FokkerRenderMachine implements RenderMachineComponent {
 		Debug.component().checkNull("blend_mode", blend_mode);
 		expectState(RENDER_MACHINE_STATE.FRAME);
 		switchState(RENDER_MACHINE_STATE.RASTER);
-		this.raster_renderer.open(blend_mode, opacity, null);
+		this.raster_renderer.open(blend_mode, opacity, null, null);
 		// this.frame_buffer.updateMode(blend_mode);
 	}
 
@@ -255,16 +255,16 @@ public class FokkerRenderMachine implements RenderMachineComponent {
 	}
 
 	@Override
-	public void beginShaderMode (final FokkerShader fokkerShader) {
+	public void beginShaderMode (final ID fokkerShader, final ShaderParameters params) {
 		Debug.component().checkNull("fokkerShader", fokkerShader);
 		expectState(RENDER_MACHINE_STATE.FRAME);
 		switchState(RENDER_MACHINE_STATE.SHADER);
-		this.shader_renderer.open(fokkerShader);
+		this.shader_renderer.open(fokkerShader, params);
 
 	}
 
 	@Override
-	public void endShaderMode (final FokkerShader fokkerShader) {
+	public void endShaderMode (final ID fokkerShader) {
 		expectState(RENDER_MACHINE_STATE.SHADER);
 		switchState(RENDER_MACHINE_STATE.FRAME);
 		this.shader_renderer.close(fokkerShader);

@@ -1,7 +1,6 @@
 
 package com.jfixby.r3.fokker.unit;
 
-import com.jfixby.r3.api.input.InputQueue;
 import com.jfixby.r3.api.ui.unit.ComponentsFactory;
 import com.jfixby.r3.api.ui.unit.RootLayer;
 import com.jfixby.r3.api.ui.unit.UnitManager;
@@ -9,6 +8,7 @@ import com.jfixby.r3.api.ui.unit.UnitToolkit;
 import com.jfixby.r3.api.ui.unit.camera.CameraSpecs;
 import com.jfixby.r3.api.ui.unit.camera.SIMPLE_CAMERA_POLICY;
 import com.jfixby.r3.fokker.api.EngineState;
+import com.jfixby.r3.fokker.api.InputQueue;
 import com.jfixby.r3.fokker.unit.cam.RedCamera;
 import com.jfixby.r3.fokker.unit.cam.RootCameraCameraViewportListener;
 import com.jfixby.r3.fokker.unit.input.RedLayerInputProcessor;

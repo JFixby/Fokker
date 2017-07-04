@@ -2,14 +2,14 @@
 package com.jfixby.r3.fokker;
 
 import com.jfixby.r3.api.EngineVersion;
-import com.jfixby.r3.api.GameStarter;
 import com.jfixby.r3.api.RedTriplaneComponent;
+import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.debug.Debug;
 
 public class Fokker implements RedTriplaneComponent {
 
-	private static final FokkerVersion VERSION = new FokkerVersion("Fokker", "#160404", "https://github.com/JFixby/Red");
-	private GameStarter starter;
+	private static final FokkerVersion VERSION = new FokkerVersion("Fokker", "#170707", "https://github.com/RedTriplane/Fokker");
+	private ID starter;
 
 	@Override
 	public EngineVersion VERSION () {
@@ -17,13 +17,13 @@ public class Fokker implements RedTriplaneComponent {
 	}
 
 	@Override
-	public void setGameStarter (final GameStarter starter) {
+	public void setGameStarter (final ID starter) {
 		Debug.checkNull("EngineStarter", starter);
 		this.starter = starter;
 	}
 
 	@Override
-	public GameStarter getGameStarter () {
+	public ID getGameStarter () {
 		return this.starter;
 	}
 

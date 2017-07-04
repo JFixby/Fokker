@@ -1,9 +1,9 @@
 
 package com.jfixby.r3.fokker.render.geo;
 
-import com.jfixby.r3.fokker.api.FokkerShader;
 import com.jfixby.r3.fokker.api.Screen;
 import com.jfixby.r3.fokker.api.ScreenDimentionsChecker;
+import com.jfixby.r3.fokker.assets.api.shader.FokkerShaderHandler;
 import com.jfixby.r3.fokker.render.FokkerRenderMachine;
 import com.jfixby.scarabei.api.err.Err;
 
@@ -44,7 +44,7 @@ public abstract class Renderer {
 
 	private com.badlogic.gdx.graphics.OrthographicCamera gdx_screen_Camera;
 	private ScreenDimentionsChecker checker;
-	private FokkerShader shader_handler;
+	private FokkerShaderHandler shader_handler;
 	private int viewportWidth;
 	private int viewportHeight;
 

@@ -1,6 +1,7 @@
 
 package com.jfixby.r3.fokker.api;
 
+import com.jfixby.r3.fokker.assets.api.shader.ShaderParameters;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.color.Color;
 import com.jfixby.scarabei.api.floatn.ReadOnlyFloat2;
@@ -55,9 +56,9 @@ public interface RenderMachineComponent {
 
 	void endRasterMode (final BLEND_MODE blend_mode);
 
-	void beginShaderMode (FokkerShader fokkerShader);
+	void beginShaderMode (ID fokkerShader, final ShaderParameters params);
 
-	void endShaderMode (FokkerShader fokkerShader);
+	void endShaderMode (ID fokkerShader);
 
 	void applyShader ();
 

@@ -2,7 +2,9 @@
 package com.jfixby.r3.fokker.render.shader;
 
 import com.jfixby.r3.fokker.api.FOKKER_SYSTEM_ASSETS;
-import com.jfixby.r3.fokker.api.FokkerShader;
+import com.jfixby.r3.fokker.assets.api.shader.FokkerShader;
+import com.jfixby.r3.fokker.assets.api.shader.FokkerShaderHandler;
+import com.jfixby.r3.fokker.assets.api.shader.ShaderParameters;
 import com.jfixby.r3.fokker.render.raster.FokkerRasterRenderer;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.geometry.Geometry;
@@ -23,14 +25,16 @@ public class FokkerShaderRenderer {
 		this.fake_asset = FOKKER_SYSTEM_ASSETS.RASTER_IS_MISING;
 	}
 
-	public void open (final FokkerShader fokkerShader) {
-		final Rectangle shape = fokkerShader.shape();
+	public void open (final ID fokkerShader, final ShaderParameters params) {
+		final Rectangle shape = params.shape();
 		if (shape != null) {
 			this.shape.setup(shape);
 		} else {
 			this.resetShape();
 		}
-		this.raster_renderer.open(null, 1f, fokkerShader);
+		final FokkerShaderHandler shader = FokkerShader.obtain(fokkerShader);
+// shader.applyParameters(params);
+		this.raster_renderer.open(null, 1f, shader, params);
 	}
 
 	private void resetShape () {
@@ -39,8 +43,9 @@ public class FokkerShaderRenderer {
 		this.shape.setSize(10000, 10000);
 	}
 
-	public void close (final FokkerShader fokkerShader) {
-		this.raster_renderer.close(null, fokkerShader);
+	public void close (final ID fokkerShader) {
+		final FokkerShaderHandler shader = FokkerShader.obtain(fokkerShader);
+		this.raster_renderer.close(null, shader);
 
 	}
 

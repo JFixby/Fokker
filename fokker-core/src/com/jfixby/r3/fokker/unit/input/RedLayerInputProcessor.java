@@ -3,10 +3,10 @@ package com.jfixby.r3.fokker.unit.input;
 
 import java.util.Iterator;
 
-import com.jfixby.r3.api.input.InputEvent;
-import com.jfixby.r3.api.input.InputQueue;
 import com.jfixby.r3.api.ui.unit.user.KeyboardInputEventListener;
 import com.jfixby.r3.api.ui.unit.user.MouseInputEventListener;
+import com.jfixby.r3.fokker.api.InputEvent;
+import com.jfixby.r3.fokker.api.InputQueue;
 import com.jfixby.r3.fokker.unit.cam.RedCamera;
 import com.jfixby.r3.fokker.unit.layers.FastList;
 import com.jfixby.r3.fokker.unit.layers.RedLayer;
