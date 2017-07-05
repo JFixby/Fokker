@@ -8,6 +8,6 @@ dependencies {
    //compile "com.github.RedTriplane.RedTriplane:red-triplane-api:$r3Version"
    
    
-   compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+   //compile "com.badlogicgames.gdx:gdx:$gdxVersion"
   
 }

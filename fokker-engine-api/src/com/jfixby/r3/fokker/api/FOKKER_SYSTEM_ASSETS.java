@@ -9,7 +9,7 @@ public class FOKKER_SYSTEM_ASSETS {
 	public static ID LOCAL_R3_BANK_NAME;
 	public static ID SHADER_GDX_DEFAULT;
 	public static ID SHADER_GRAYSCALE;
-	public static ID RASTER_IS_MISING;
+
 	public static ID BLACK;
 	public static ID DEBUG_BLACK;
 	public static ID LOGO;
@@ -28,7 +28,6 @@ public class FOKKER_SYSTEM_ASSETS {
 	public static void init () {
 		LOCAL_R3_BANK_NAME = Names.newID("com.red-triplane.assets.r3.local");
 
-		RASTER_IS_MISING = Names.newID("com.jfixby.r3.fokker.render.raster_is_missing");
 		BLACK = Names.newID("com.jfixby.r3.fokker.render.black");
 		DEBUG_BLACK = Names.newID("com.jfixby.r3.fokker.render.black-debug");
 

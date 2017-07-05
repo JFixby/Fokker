@@ -1,6 +1,8 @@
 
 package com.jfixby.r3.fokker.api;
 
+import com.jfixby.r3.api.EngineState;
+
 public interface UnitsMachineExecutor {
 
 	public void doDeploy ();

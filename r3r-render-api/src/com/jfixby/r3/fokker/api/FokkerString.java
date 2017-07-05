@@ -1,12 +1,9 @@
 
 package com.jfixby.r3.fokker.api;
 
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.utils.Array;
-
 public interface FokkerString {
 
-	Array<TextureRegion> getRegions ();
+	// Array<TextureRegion> getRegions ();
 
 	int getVertexCount (int region);
 
