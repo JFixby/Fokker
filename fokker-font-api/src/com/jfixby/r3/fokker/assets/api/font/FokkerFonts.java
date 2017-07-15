@@ -1,7 +1,7 @@
 
 package com.jfixby.r3.fokker.assets.api.font;
 
-import com.jfixby.r3.fokker.api.StringHandler;
+import com.jfixby.r3.fokker.api.FontParameters;
 import com.jfixby.scarabei.api.ComponentInstaller;
 import com.jfixby.scarabei.api.assets.ID;
 
@@ -27,8 +27,8 @@ public class FokkerFonts {
 
 	}
 
-	public static final FokkerString obtain (final StringHandler stringID) {
-		return componentInstaller.getComponent().obtainString(stringID);
+	public static final FokkerString obtain (final ID fontID, final FontParameters fontParams, final String stringValue) {
+		return componentInstaller.getComponent().obtainString(fontID, fontParams, stringValue);
 
 	}
 
