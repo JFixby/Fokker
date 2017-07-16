@@ -1,7 +1,7 @@
 
 package com.jfixby.r3.fokker.assets.api.shader;
 
-import com.jfixby.r3.fokker.api.ShaderParameters;
+import com.jfixby.r3.fokker.api.ShaderSettings;
 
 public interface FokkerShader {
 
@@ -9,7 +9,7 @@ public interface FokkerShader {
 
 	boolean isOverlay ();
 
-	void applyParameters (ShaderParameters params);
+	void applyParameters (ShaderSettings params);
 
 	void setOpacity (double opacity);
 
