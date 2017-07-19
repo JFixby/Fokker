@@ -6,7 +6,7 @@ include "fokker-gwt-api"
 include "fokker-engine-api"
 
 include "fokker-texture-api"
-//include "fokker-shader-api"
+include "fokker-shader-api"
 include "fokker-font-api"
 
 include 'fokker-render-api'
