@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.badlogic.gdx.math.Matrix4;
 import com.jfixby.r3.api.screen.Screen;
 import com.jfixby.r3.api.screen.ScreenDimentionsChecker;
-import com.jfixby.r3.fokker.api.BUFFER_STATE;
+import com.jfixby.r3.render.api.BUFFER_STATE;
 import com.jfixby.scarabei.api.debug.Debug;
 import com.jfixby.scarabei.api.debug.DebugTimer;
 import com.jfixby.scarabei.api.err.Err;

@@ -1,7 +1,7 @@
 
 package com.jfixby.r3.fokker.font.api;
 
-import com.jfixby.r3.fokker.api.FontParameters;
+import com.jfixby.r3.render.api.FontParameters;
 import com.jfixby.scarabei.api.ComponentInstaller;
 import com.jfixby.scarabei.api.assets.ID;
 

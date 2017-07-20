@@ -2,9 +2,9 @@
 package com.jfixby.r3.fokker.adaptor;
 
 import com.badlogic.gdx.Gdx;
-import com.jfixby.r3.api.EngineState;
-import com.jfixby.r3.api.InputQueue;
-import com.jfixby.r3.api.UnitsMachineExecutor;
+import com.jfixby.r3.api.exe.EngineExecutor;
+import com.jfixby.r3.api.exe.EngineState;
+import com.jfixby.r3.api.exe.InputQueue;
 import com.jfixby.r3.api.screen.Screen;
 import com.jfixby.scarabei.api.debug.Debug;
 import com.jfixby.scarabei.api.debug.DebugTimer;
@@ -21,7 +21,7 @@ public class GdxAdaptor implements com.badlogic.gdx.ApplicationListener, EngineS
 			+ this.input_adaptor + "]";
 	}
 
-	private final UnitsMachineExecutor executor;
+	private final EngineExecutor executor;
 	long cycle = 0;
 	final GdxAdaptorViewportState viewport_state = new GdxAdaptorViewportState(this);
 	final GdxInputAdaptor input_adaptor = new GdxInputAdaptor(this);
@@ -30,7 +30,7 @@ public class GdxAdaptor implements com.badlogic.gdx.ApplicationListener, EngineS
 	private final StateSwitcher<ENGINE_STATE> state;
 	private DebugTimer timer;
 
-	public GdxAdaptor (final UnitsMachineExecutor executor) {
+	public GdxAdaptor (final EngineExecutor executor) {
 		this.executor = executor != null ? executor : new DefaultExecutor();
 		this.state = JUtils.newStateSwitcher(ENGINE_STATE.NEW);
 	}

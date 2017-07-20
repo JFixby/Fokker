@@ -1,11 +1,11 @@
 
 package com.jfixby.r3.fokker.adaptor;
 
-import com.jfixby.r3.api.EngineState;
-import com.jfixby.r3.api.UnitsMachineExecutor;
+import com.jfixby.r3.api.exe.EngineExecutor;
+import com.jfixby.r3.api.exe.EngineState;
 import com.jfixby.scarabei.api.log.L;
 
-public class DefaultExecutor implements UnitsMachineExecutor {
+public class DefaultExecutor implements EngineExecutor {
 
 	@Override
 	public void doUpdate (final EngineState gdxAdaptor) {

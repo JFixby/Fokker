@@ -1,7 +1,7 @@
 
 package com.jfixby.r3.fokker.adaptor;
 
-import com.jfixby.r3.api.InputEvent;
+import com.jfixby.r3.api.exe.InputEvent;
 import com.jfixby.r3.api.screen.Screen;
 import com.jfixby.scarabei.api.input.Key;
 import com.jfixby.scarabei.api.input.MouseButton;

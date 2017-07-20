@@ -1,10 +1,10 @@
 
 package com.jfixby.r3.fokker.render.shader;
 
-import com.jfixby.r3.fokker.api.DefaultShaders;
-import com.jfixby.r3.fokker.api.Shader;
 import com.jfixby.r3.fokker.render.FokkerRenderMachine;
 import com.jfixby.r3.fokker.shader.api.ShaderAsset;
+import com.jfixby.r3.render.api.DefaultShaders;
+import com.jfixby.r3.render.api.Shader;
 import com.jfixby.rana.api.asset.AssetHandler;
 import com.jfixby.rana.api.asset.AssetsConsumer;
 import com.jfixby.rana.api.asset.LoadedAssets;

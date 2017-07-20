@@ -1,7 +1,7 @@
 
 package com.jfixby.r3.fokker.render;
 
-import com.jfixby.r3.fokker.api.DefaultAssets;
+import com.jfixby.r3.render.api.DefaultAssets;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.assets.Names;
 

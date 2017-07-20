@@ -2,7 +2,7 @@
 package com.jfixby.r3.fokker.render;
 
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
-import com.jfixby.r3.fokker.api.FokkerShapesRenderDevice;
+import com.jfixby.r3.render.api.FokkerShapesRenderDevice;
 
 public class FokkerRenderDevice implements FokkerShapesRenderDevice {
 

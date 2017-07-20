@@ -1,7 +1,7 @@
 
 package com.jfixby.r3.fokker.shader.red;
 
-import com.jfixby.r3.fokker.api.ShaderSettings;
+import com.jfixby.r3.render.api.ShaderSettings;
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.Map;
 import com.jfixby.scarabei.api.collections.Mapping;

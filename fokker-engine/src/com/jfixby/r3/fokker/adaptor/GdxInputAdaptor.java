@@ -4,8 +4,8 @@ package com.jfixby.r3.fokker.adaptor;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.jfixby.r3.api.InputEvent;
-import com.jfixby.r3.api.InputQueue;
+import com.jfixby.r3.api.exe.InputEvent;
+import com.jfixby.r3.api.exe.InputQueue;
 import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.Pool;
 import com.jfixby.scarabei.api.collections.PoolElementsSpawner;

@@ -1,7 +1,7 @@
 
 package com.jfixby.r3.fokker.font.red;
 
-import com.jfixby.r3.fokker.api.SpritesRenderer;
+import com.jfixby.r3.render.api.SpritesRenderer;
 import com.jfixby.scarabei.api.log.L;
 
 public class VerticesCache {

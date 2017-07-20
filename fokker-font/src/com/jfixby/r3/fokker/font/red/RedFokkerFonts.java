@@ -1,11 +1,11 @@
 
 package com.jfixby.r3.fokker.font.red;
 
-import com.jfixby.r3.fokker.api.FontParameters;
 import com.jfixby.r3.fokker.font.api.FokkerFont;
 import com.jfixby.r3.fokker.font.api.FokkerFontPackageReader;
 import com.jfixby.r3.fokker.font.api.FokkerFontsComponent;
 import com.jfixby.r3.fokker.font.api.FokkerString;
+import com.jfixby.r3.render.api.FontParameters;
 import com.jfixby.scarabei.api.assets.ID;
 
 public class RedFokkerFonts implements FokkerFontsComponent {

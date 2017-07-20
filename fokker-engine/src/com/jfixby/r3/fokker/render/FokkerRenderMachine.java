@@ -1,18 +1,18 @@
 
 package com.jfixby.r3.fokker.render;
 
-import com.jfixby.r3.fokker.api.DefaultShaders;
-import com.jfixby.r3.fokker.api.Drawable;
-import com.jfixby.r3.fokker.api.FontParameters;
-import com.jfixby.r3.fokker.api.RENDER_PARAMS;
-import com.jfixby.r3.fokker.api.RenderMachineComponent;
-import com.jfixby.r3.fokker.api.ScreenShot;
-import com.jfixby.r3.fokker.api.ShaderSettings;
-import com.jfixby.r3.fokker.api.TEXTURE_BLEND_MODE;
 import com.jfixby.r3.fokker.render.geo.FokkerShapesRenderer;
 import com.jfixby.r3.fokker.render.raster.FokkerRasterRenderer;
 import com.jfixby.r3.fokker.render.shader.FokkerDefaultShaders;
 import com.jfixby.r3.fokker.render.shader.FokkerShaderRenderer;
+import com.jfixby.r3.render.api.DefaultShaders;
+import com.jfixby.r3.render.api.Drawable;
+import com.jfixby.r3.render.api.FontParameters;
+import com.jfixby.r3.render.api.RENDER_PARAMS;
+import com.jfixby.r3.render.api.RenderMachineComponent;
+import com.jfixby.r3.render.api.ScreenShot;
+import com.jfixby.r3.render.api.ShaderSettings;
+import com.jfixby.r3.render.api.TEXTURE_BLEND_MODE;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.color.Color;
 import com.jfixby.scarabei.api.color.Colors;
