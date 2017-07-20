@@ -1,4 +1,13 @@
-include "fokker-desktop-api"
+include "fokker-desktop"
+include "fokker-android"
+include "fokker-engine"
+include "fokker-io"
+include "fokker-shader-io"
+include "fokker-font"
+include "fokker-box2d"
+
+
+
 include "fokker-ios-api"
 include "fokker-android-api"
 include "fokker-gwt-api"

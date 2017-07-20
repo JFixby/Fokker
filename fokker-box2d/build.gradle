@@ -1,0 +1,11 @@
+
+
+dependencies {
+    
+    compile "com.github.RedTriplane.Box2D:box2d-api:$box2DAPILevel"
+    
+    compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+
+}
+
+	
