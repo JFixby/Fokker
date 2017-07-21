@@ -19,6 +19,7 @@ public class RedFokkerShaderPackageReader implements PackageLoader, FokkerShader
 	public RedFokkerShaderPackageReader (final RedFokkerShaders redFokkerShaders) {
 		this.redFokkerShaders = redFokkerShaders;
 		this.acceptablePackageFormats = Collections.newList(new PackageFormat(FokkerShaderPackageReader.PACKAGE_FORMAT));
+//
 	}
 
 	@Override

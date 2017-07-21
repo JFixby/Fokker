@@ -22,15 +22,15 @@ public class RedFokkerRasterManager implements AssetsConsumer {
 
 // resource.rebuildIndex(this.reader);
 
-		this.loadSystemAsset(fokkerRenderMachine.DefaultAssets().SHADER_GDX_DEFAULT);
+// this.loadSystemAsset(fokkerRenderMachine.DefaultAssets().SHADER_GDX_DEFAULT);
 
-		this.loadSystemAsset(fokkerRenderMachine.DefaultAssets().RASTER_IS_MISING());
+// this.loadSystemAsset(fokkerRenderMachine.DefaultAssets().RASTER_IS_MISING());
 // this.loadSystemAsset(FOKKER_SYSTEM_ASSETS.BLACK);
-		this.loadSystemAsset(fokkerRenderMachine.DefaultAssets().BLACK());
+// this.loadSystemAsset(fokkerRenderMachine.DefaultAssets().BLACK());
 // this.loadSystemAsset(FOKKER_SYSTEM_ASSETS.DEBUG_BLACK);
-		this.loadSystemAsset(fokkerRenderMachine.DefaultAssets().DEBUG_BLACK());
+// this.loadSystemAsset(fokkerRenderMachine.DefaultAssets().DEBUG_BLACK());
 // this.loadSystemAsset(FOKKER_SYSTEM_ASSETS.LOGO);
-		this.loadSystemAsset(fokkerRenderMachine.DefaultAssets().LOGO());
+// this.loadSystemAsset(fokkerRenderMachine.DefaultAssets().LOGO());
 
 // this.loadSystemAsset(FOKKER_SYSTEM_ASSETS.SHADER_TEST);
 

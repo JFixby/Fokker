@@ -13,6 +13,8 @@ import com.jfixby.r3.fokker.render.geo.FokkerShapesRenderer;
 import com.jfixby.r3.fokker.render.raster.FokkerRasterRenderer;
 import com.jfixby.r3.fokker.render.shader.FokkerDefaultShaders;
 import com.jfixby.r3.fokker.render.shader.FokkerShaderRenderer;
+import com.jfixby.r3.fokker.shader.api.FokkerShaders;
+import com.jfixby.r3.rana.api.loader.PackagesLoader;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.color.Color;
 import com.jfixby.scarabei.api.color.Colors;
@@ -32,7 +34,7 @@ public class FokkerRenderMachine implements RenderMachineComponent {
 	//
 
 	public FokkerRenderMachine () {
-		this.init();
+// this.init();
 	}
 
 	static Color CLEAR_SCREEN_COLOR;
@@ -57,14 +59,19 @@ public class FokkerRenderMachine implements RenderMachineComponent {
 
 	private final FokkerDefaultShaders defaultShaders = new FokkerDefaultShaders(this);
 
-	final private void init () {
+	@Override
+	final public void deploy () {
+
 		render_state = JUtils.newStateSwitcher(RENDER_MACHINE_STATE.NEW);
 
 		// L.d("init()", render_state);
 		render_state.setDebugName("render_state");
 		render_state.setDebugFlag(!true);
 
+		PackagesLoader.registerPackageReader(FokkerShaders.invoke().packageReader().reader());
+
 		this.raster_manager = new RedFokkerRasterManager(this);
+
 		// L.d("init()", raster_manager);
 		// background_color = Colors.BLACK().customize().setBlue(0.4f);
 

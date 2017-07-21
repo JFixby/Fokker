@@ -7,7 +7,7 @@ import com.jfixby.scarabei.api.assets.ID;
 public class FokkerShaders {
 
 	static private ComponentInstaller<FokkerShadersComponent> componentInstaller = new ComponentInstaller<FokkerShadersComponent>(
-		"FokkerShader");
+		"FokkerShaders");
 
 	public static final void installComponent (final FokkerShadersComponent component_to_install) {
 		componentInstaller.installComponent(component_to_install);
