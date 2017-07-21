@@ -1,8 +1,8 @@
 
 package com.jfixby.r3.fokker.render.shader;
 
-import com.jfixby.r3.api.render.RenderMachine;
-import com.jfixby.r3.api.render.ShaderSettings;
+import com.jfixby.r3.engine.api.render.RenderMachine;
+import com.jfixby.r3.engine.api.render.ShaderSettings;
 import com.jfixby.r3.fokker.render.raster.FokkerRasterRenderer;
 import com.jfixby.r3.fokker.shader.api.FokkerShader;
 import com.jfixby.r3.fokker.shader.api.FokkerShaders;

@@ -2,9 +2,9 @@
 package com.jfixby.r3.fokker.render.raster;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.jfixby.r3.api.render.FontParameters;
-import com.jfixby.r3.api.render.ShaderSettings;
-import com.jfixby.r3.api.render.TEXTURE_BLEND_MODE;
+import com.jfixby.r3.engine.api.render.FontParameters;
+import com.jfixby.r3.engine.api.render.ShaderSettings;
+import com.jfixby.r3.engine.api.render.TEXTURE_BLEND_MODE;
 import com.jfixby.r3.fokker.render.FokkerDefaultAssets;
 import com.jfixby.r3.fokker.render.FokkerRenderMachine;
 import com.jfixby.r3.fokker.render.GdxRender;

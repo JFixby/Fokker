@@ -1,8 +1,8 @@
 
 package com.jfixby.r3.fokker;
 
-import com.jfixby.r3.api.EngineVersion;
-import com.jfixby.r3.api.RedTriplaneComponent;
+import com.jfixby.r3.engine.api.EngineVersion;
+import com.jfixby.r3.engine.api.RedTriplaneComponent;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.debug.Debug;
 

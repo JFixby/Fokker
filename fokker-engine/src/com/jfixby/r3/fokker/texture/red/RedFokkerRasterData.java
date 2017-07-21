@@ -2,8 +2,8 @@
 package com.jfixby.r3.fokker.texture.red;
 
 import com.jfixby.r3.fokker.texture.api.FokkerTexture;
-import com.jfixby.rana.api.Asset;
-import com.jfixby.rana.api.AssetsGroup;
+import com.jfixby.r3.rana.api.Asset;
+import com.jfixby.r3.rana.api.AssetsGroup;
 import com.jfixby.scarabei.api.assets.ID;
 
 public class RedFokkerRasterData implements FokkerTexture, Asset {

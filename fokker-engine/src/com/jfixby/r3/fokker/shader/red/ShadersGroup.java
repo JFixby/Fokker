@@ -5,9 +5,9 @@ import java.io.IOException;
 
 import com.jfixby.r3.fokker.assets.api.shader.io.ShaderInfo;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShadersContainer;
-import com.jfixby.rana.api.AssetsContainer;
-import com.jfixby.rana.api.AssetsGroup;
-import com.jfixby.rana.api.loader.PackageReaderInput;
+import com.jfixby.r3.rana.api.AssetsContainer;
+import com.jfixby.r3.rana.api.AssetsGroup;
+import com.jfixby.r3.rana.api.loader.PackageReaderInput;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.assets.Names;
 import com.jfixby.scarabei.api.collections.Collections;

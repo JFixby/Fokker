@@ -1,7 +1,7 @@
 
 package com.jfixby.r3.fokker.texture.api;
 
-import com.jfixby.rana.api.loader.PackageLoader;
+import com.jfixby.r3.rana.api.loader.PackageLoader;
 
 public interface FokkerTexturePackageReader {
 

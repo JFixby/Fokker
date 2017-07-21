@@ -1,9 +1,9 @@
 
 package com.jfixby.r3.fokker.adaptor;
 
-import com.jfixby.r3.api.screen.ScreenComponent;
-import com.jfixby.r3.api.screen.ScreenDimentions;
-import com.jfixby.r3.api.screen.ScreenDimentionsChecker;
+import com.jfixby.r3.engine.api.screen.ScreenComponent;
+import com.jfixby.r3.engine.api.screen.ScreenDimentions;
+import com.jfixby.r3.engine.api.screen.ScreenDimentionsChecker;
 
 public class GdxAdaptorViewportState implements ScreenComponent, ScreenDimentions {
 

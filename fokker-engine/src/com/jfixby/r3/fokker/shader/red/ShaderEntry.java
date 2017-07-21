@@ -3,15 +3,15 @@ package com.jfixby.r3.fokker.shader.red;
 
 import java.io.IOException;
 
-import com.jfixby.r3.api.render.Shader;
-import com.jfixby.r3.api.render.ShaderProperties;
-import com.jfixby.r3.api.render.ShaderSettings;
+import com.jfixby.r3.engine.api.render.Shader;
+import com.jfixby.r3.engine.api.render.ShaderProperties;
+import com.jfixby.r3.engine.api.render.ShaderSettings;
 import com.jfixby.r3.fokker.assets.api.shader.io.R3_SHADER_SETTINGS;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShaderInfo;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShadersContainer;
 import com.jfixby.r3.fokker.shader.api.FokkerShader;
-import com.jfixby.rana.api.Asset;
-import com.jfixby.rana.api.AssetsGroup;
+import com.jfixby.r3.rana.api.Asset;
+import com.jfixby.r3.rana.api.AssetsGroup;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.debug.Debug;
 import com.jfixby.scarabei.api.err.Err;

@@ -2,8 +2,8 @@
 package com.jfixby.r3.fokker.font.red;
 
 import com.jfixby.r3.fokker.font.api.FokkerFont;
-import com.jfixby.rana.api.Asset;
-import com.jfixby.rana.api.AssetsGroup;
+import com.jfixby.r3.rana.api.Asset;
+import com.jfixby.r3.rana.api.AssetsGroup;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.err.Err;
 import com.jfixby.scarabei.api.file.File;

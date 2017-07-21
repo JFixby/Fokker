@@ -1,13 +1,13 @@
 
 package com.jfixby.r3.fokker.render.shader;
 
-import com.jfixby.r3.api.render.DefaultShaders;
-import com.jfixby.r3.api.render.Shader;
+import com.jfixby.r3.engine.api.render.DefaultShaders;
+import com.jfixby.r3.engine.api.render.Shader;
 import com.jfixby.r3.fokker.render.FokkerRenderMachine;
 import com.jfixby.r3.fokker.shader.api.ShaderAsset;
-import com.jfixby.rana.api.asset.AssetHandler;
-import com.jfixby.rana.api.asset.AssetsConsumer;
-import com.jfixby.rana.api.asset.LoadedAssets;
+import com.jfixby.r3.rana.api.asset.AssetHandler;
+import com.jfixby.r3.rana.api.asset.AssetsConsumer;
+import com.jfixby.r3.rana.api.asset.LoadedAssets;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.err.Err;
 

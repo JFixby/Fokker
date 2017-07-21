@@ -1,8 +1,8 @@
 
 package com.jfixby.r3.fokker.adaptor;
 
-import com.jfixby.r3.api.exe.EngineExecutor;
-import com.jfixby.r3.api.exe.EngineState;
+import com.jfixby.r3.engine.api.exe.EngineExecutor;
+import com.jfixby.r3.engine.api.exe.EngineState;
 import com.jfixby.scarabei.api.log.L;
 
 public class DefaultExecutor implements EngineExecutor {

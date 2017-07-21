@@ -1,7 +1,7 @@
 
 package com.jfixby.r3.fokker.shader.red;
 
-import com.jfixby.r3.api.render.ShaderParameter;
+import com.jfixby.r3.engine.api.render.ShaderParameter;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShaderParameterInfo;
 
 public class RedShaderParameter implements ShaderParameter {

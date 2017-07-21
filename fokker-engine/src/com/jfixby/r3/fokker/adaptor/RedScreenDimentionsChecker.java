@@ -1,8 +1,8 @@
 
 package com.jfixby.r3.fokker.adaptor;
 
-import com.jfixby.r3.api.screen.Screen;
-import com.jfixby.r3.api.screen.ScreenDimentionsChecker;
+import com.jfixby.r3.engine.api.screen.Screen;
+import com.jfixby.r3.engine.api.screen.ScreenDimentionsChecker;
 
 public class RedScreenDimentionsChecker implements ScreenDimentionsChecker {
 

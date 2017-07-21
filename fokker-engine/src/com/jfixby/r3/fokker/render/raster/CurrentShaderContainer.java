@@ -3,8 +3,8 @@ package com.jfixby.r3.fokker.render.raster;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
-import com.jfixby.r3.api.render.ShaderSettings;
-import com.jfixby.r3.api.render.TEXTURE_BLEND_MODE;
+import com.jfixby.r3.engine.api.render.ShaderSettings;
+import com.jfixby.r3.engine.api.render.TEXTURE_BLEND_MODE;
 import com.jfixby.r3.fokker.render.GdxRender;
 import com.jfixby.r3.fokker.shader.api.FokkerShader;
 import com.jfixby.scarabei.api.err.Err;

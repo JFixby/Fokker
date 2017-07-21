@@ -1,9 +1,9 @@
 
 package com.jfixby.r3.fokker.shader.red;
 
-import com.jfixby.r3.api.render.ShaderParameter;
-import com.jfixby.r3.api.render.ShaderProperties;
-import com.jfixby.r3.api.render.ShaderSettings;
+import com.jfixby.r3.engine.api.render.ShaderParameter;
+import com.jfixby.r3.engine.api.render.ShaderProperties;
+import com.jfixby.r3.engine.api.render.ShaderSettings;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShaderInfo;
 import com.jfixby.r3.fokker.assets.api.shader.io.ShaderParameterInfo;
 import com.jfixby.scarabei.api.collections.Collections;

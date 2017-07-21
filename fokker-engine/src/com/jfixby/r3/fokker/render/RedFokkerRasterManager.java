@@ -3,9 +3,9 @@ package com.jfixby.r3.fokker.render;
 
 import java.io.IOException;
 
-import com.jfixby.rana.api.asset.AssetsConsumer;
-import com.jfixby.rana.api.asset.LoadedAssets;
-import com.jfixby.rana.api.manager.AssetsManager;
+import com.jfixby.r3.rana.api.asset.AssetsConsumer;
+import com.jfixby.r3.rana.api.asset.LoadedAssets;
+import com.jfixby.r3.rana.api.manager.AssetsManager;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.err.Err;
 
