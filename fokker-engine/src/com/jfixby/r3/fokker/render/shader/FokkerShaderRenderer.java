@@ -1,11 +1,11 @@
 
 package com.jfixby.r3.fokker.render.shader;
 
+import com.jfixby.r3.api.render.RenderMachine;
+import com.jfixby.r3.api.render.ShaderSettings;
 import com.jfixby.r3.fokker.render.raster.FokkerRasterRenderer;
 import com.jfixby.r3.fokker.shader.api.FokkerShader;
 import com.jfixby.r3.fokker.shader.api.FokkerShaders;
-import com.jfixby.r3.render.api.RenderMachine;
-import com.jfixby.r3.render.api.ShaderSettings;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.geometry.Geometry;
 import com.jfixby.scarabei.api.geometry.Rectangle;

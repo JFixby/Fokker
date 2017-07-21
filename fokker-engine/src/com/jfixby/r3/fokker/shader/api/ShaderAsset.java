@@ -1,7 +1,7 @@
 
 package com.jfixby.r3.fokker.shader.api;
 
-import com.jfixby.r3.render.api.ShaderParameter;
+import com.jfixby.r3.api.render.ShaderParameter;
 import com.jfixby.rana.api.Asset;
 import com.jfixby.scarabei.api.collections.Mapping;
 

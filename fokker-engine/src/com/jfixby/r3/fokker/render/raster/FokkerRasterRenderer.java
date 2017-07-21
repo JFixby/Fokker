@@ -2,6 +2,9 @@
 package com.jfixby.r3.fokker.render.raster;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.jfixby.r3.api.render.FontParameters;
+import com.jfixby.r3.api.render.ShaderSettings;
+import com.jfixby.r3.api.render.TEXTURE_BLEND_MODE;
 import com.jfixby.r3.fokker.render.FokkerDefaultAssets;
 import com.jfixby.r3.fokker.render.FokkerRenderMachine;
 import com.jfixby.r3.fokker.render.GdxRender;
@@ -9,9 +12,6 @@ import com.jfixby.r3.fokker.render.RenderBuffer;
 import com.jfixby.r3.fokker.render.geo.Renderer;
 import com.jfixby.r3.fokker.shader.api.FokkerShader;
 import com.jfixby.r3.fokker.shader.api.FokkerShaders;
-import com.jfixby.r3.render.api.FontParameters;
-import com.jfixby.r3.render.api.ShaderSettings;
-import com.jfixby.r3.render.api.TEXTURE_BLEND_MODE;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.err.Err;
 import com.jfixby.scarabei.api.geometry.CanvasPosition;
