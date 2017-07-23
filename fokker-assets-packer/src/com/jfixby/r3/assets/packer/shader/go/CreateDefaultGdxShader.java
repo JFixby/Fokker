@@ -1,5 +1,5 @@
 
-package com.jfixby.r3.assets.packer.shader;
+package com.jfixby.r3.assets.packer.shader.go;
 
 import java.io.IOException;
 
@@ -55,7 +55,7 @@ public class CreateDefaultGdxShader {
 		Json.installComponent(new GoogleGson());
 		L.d("creating shader", FOKKER_SYSTEM_ASSETS.SHADER_GDX_DEFAULT);
 		final ID gdxDefault = Names.newID(FOKKER_SYSTEM_ASSETS.SHADER_GDX_DEFAULT);
-		final File output_folder = LocalFileSystem.ApplicationHome().child("shaders").child("templates")
+		final File output_folder = LocalFileSystem.ApplicationHome().child("shaders").child("prepared")
 			.child("" + gdxDefault.parent());
 		output_folder.makeFolder();
 		output_folder.clearFolder();
