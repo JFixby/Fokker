@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import com.jfixby.r3.assets.packer.cfg.ConfigLoader;
 import com.jfixby.r3.assets.packer.cfg.R3AssetsPackerConfig;
-import com.jfixby.r3.fokker.render.FOKKER_SYSTEM_ASSETS;
+import com.jfixby.r3.fokker.FOKKER_SYSTEM_ASSETS;
 import com.jfixby.scarabei.api.assets.Names;
 import com.jfixby.scarabei.api.collections.List;
 import com.jfixby.scarabei.api.desktop.ScarabeiDesktop;
