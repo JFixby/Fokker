@@ -21,7 +21,7 @@ public class FokkerStarterConfigReader implements PackageLoader {
 	public FokkerStarterConfigReader () {
 		super();
 		this.acceptablePackageFormats = Collections.newList();
-		final PackageFormat format = new PackageFormat(FokkerStarterConfig.PACKAGE_FORMAT_STRING);
+		final PackageFormat format = new PackageFormat(FokkerStarterConfig.PACKAGE_FORMAT);
 		this.acceptablePackageFormats.add(format);
 	}
 

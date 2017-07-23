@@ -6,7 +6,6 @@ include "fokker-shader-io"
 include "fokker-font"
 include "fokker-box2d"
 
-include "fokker-assets-packer"
 
 
 include "fokker-ios-api"
