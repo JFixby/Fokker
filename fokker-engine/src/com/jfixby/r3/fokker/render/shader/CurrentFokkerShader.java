@@ -1,5 +1,5 @@
 
-package com.jfixby.r3.fokker.render.raster;
+package com.jfixby.r3.fokker.render.shader;
 
 import com.jfixby.r3.fokker.shader.api.FokkerShader;
 import com.jfixby.scarabei.api.util.JUtils;

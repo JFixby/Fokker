@@ -3,14 +3,14 @@ package com.jfixby.r3.fokker;
 
 public class FOKKER_SYSTEM_ASSETS {
 
-	public static final String LOCAL_BANK_NAME = "com.jfixby.r3.assets.fokker.local";
-	public static String SHADERS = "com.jfixby.r3.assets.fokker.shader";
+	public static final String LOCAL_BANK_NAME = "com.jfixby.fokker.assets.local";
+	public static String SHADERS = "com.jfixby.fokker.assets.render.shader";
 
-	public static String RASTER_IS_MISING = "com.jfixby.r3.fokker.render.raster_is_missing";
+	public static String RASTER_IS_MISING = "com.jfixby.fokker.assets.render.raster_is_missing";
 
-	public static String BLACK = "com.jfixby.r3.fokker.render.black";
-	public static String DEBUG_BLACK = "com.jfixby.r3.fokker.render.black-debug";
-	public static String LOGO = "com.jfixby.r3.fokker.render.logo";
+	public static String BLACK = "com.jfixby.fokker.assets.render.black";
+	public static String DEBUG_BLACK = "com.jfixby.fokker.assets.render.black-debug";
+	public static String LOGO = "com.jfixby.fokker.assets.render.logo";
 
 	public static String GENERIC_FONT = "otf.GenericFont";
 
