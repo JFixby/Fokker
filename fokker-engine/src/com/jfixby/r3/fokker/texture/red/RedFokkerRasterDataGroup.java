@@ -29,7 +29,7 @@ public class RedFokkerRasterDataGroup implements AssetsGroup {
 	private final PackageReaderInput input;
 
 	public RedFokkerRasterDataGroup (final PackageReaderInput input, final FokkerTextureLoader reader,
-		final RedFokkerRaster registry) throws IOException {
+		final RedFokkerTextures registry) throws IOException {
 		this.input = input;
 
 		final File package_root_file = this.getPackageInput().packageRootFile;
@@ -61,7 +61,7 @@ public class RedFokkerRasterDataGroup implements AssetsGroup {
 		}
 	}
 
-	public void readTexture (final RedFokkerRaster registry) {
+	public void readTexture (final RedFokkerTextures registry) {
 		final File package_root_file = this.getPackageInput().packageRootFile;
 // final PackageHandler handler = this.getPackageInput().getPackageHandler();
 		final ToGdxFileAdaptor gdx_file = new ToGdxFileAdaptor(package_root_file);
@@ -84,7 +84,7 @@ public class RedFokkerRasterDataGroup implements AssetsGroup {
 		return this.input;
 	}
 
-	public void readAtlas (final RedFokkerRaster registry) {
+	public void readAtlas (final RedFokkerTextures registry) {
 		final File package_root_file = this.getPackageInput().packageRootFile;
 // final PackageHandler handler = this.getPackageInput().getPackageHandler();
 		final ToGdxFileAdaptor gdx_file = new ToGdxFileAdaptor(package_root_file);

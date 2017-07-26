@@ -9,11 +9,13 @@ import com.jfixby.r3.engine.api.render.RenderMachineComponent;
 import com.jfixby.r3.engine.api.render.ScreenShot;
 import com.jfixby.r3.engine.api.render.ShaderSettings;
 import com.jfixby.r3.engine.api.render.TEXTURE_BLEND_MODE;
+import com.jfixby.r3.fokker.font.api.FokkerFonts;
 import com.jfixby.r3.fokker.render.geo.FokkerShapesRenderer;
 import com.jfixby.r3.fokker.render.raster.FokkerRasterRenderer;
 import com.jfixby.r3.fokker.render.shader.FokkerDefaultShaders;
 import com.jfixby.r3.fokker.render.shader.FokkerShaderRenderer;
 import com.jfixby.r3.fokker.shader.api.FokkerShaders;
+import com.jfixby.r3.fokker.texture.api.FokkerTextures;
 import com.jfixby.r3.rana.api.loader.PackagesLoader;
 import com.jfixby.scarabei.api.assets.ID;
 import com.jfixby.scarabei.api.color.Color;
@@ -69,6 +71,8 @@ public class FokkerRenderMachine implements RenderMachineComponent {
 		render_state.setDebugFlag(!true);
 
 		PackagesLoader.registerPackageReader(FokkerShaders.invoke().packageReader().reader());
+		PackagesLoader.registerPackageReader(FokkerTextures.invoke().packageReader().reader());
+		PackagesLoader.registerPackageReader(FokkerFonts.invoke().packageReader().reader());
 
 		this.raster_manager = new RedFokkerRasterManager(this);
 

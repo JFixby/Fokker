@@ -12,7 +12,7 @@ import com.jfixby.scarabei.api.collections.Collections;
 import com.jfixby.scarabei.api.collections.Map;
 import com.jfixby.scarabei.api.err.Err;
 
-public class RedFokkerRaster implements FokkerTexturesComponent {
+public class RedFokkerTextures implements FokkerTexturesComponent {
 
 	final FokkerTextureLoader reader = new FokkerTextureLoader(this);
 	final Map<ID, FokkerTexture> registry = Collections.newMap();

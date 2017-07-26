@@ -16,9 +16,9 @@ public final class FokkerTextureLoader implements FokkerTexturePackageReader, Pa
 	public static final PackageFormat ATLAS = new PackageFormat(FokkerTexturePackageReader.PACKAGE_FORMAT_ATLAS);
 
 	final List<PackageFormat> acceptablePackageFormats = Collections.newList();
-	private final RedFokkerRaster registry;
+	private final RedFokkerTextures registry;
 
-	public FokkerTextureLoader (final RedFokkerRaster registry) {
+	public FokkerTextureLoader (final RedFokkerTextures registry) {
 		this.acceptablePackageFormats.add(TEXTURE);
 		this.acceptablePackageFormats.add(ATLAS);
 		this.registry = registry;

@@ -7,7 +7,7 @@ import com.jfixby.scarabei.api.assets.ID;
 public class FokkerTextures {
 
 	static private ComponentInstaller<FokkerTexturesComponent> componentInstaller = new ComponentInstaller<FokkerTexturesComponent>(
-		"FokkerRaster");
+		"FokkerTextures");
 
 	public static final void installComponent (final FokkerTexturesComponent component_to_install) {
 		componentInstaller.installComponent(component_to_install);
