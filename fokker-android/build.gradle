@@ -1,9 +1,0 @@
-
-sourceCompatibility = 1.6
-
-dependencies{
-  
-  compile "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
-  compile group: 'com.google.android', name: 'android', version: '4.1.1.4'
-  
-}

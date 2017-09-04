@@ -11,13 +11,9 @@ buildscript {
 }
 
 ext {
-        scarabeiVersion = "1.5.1"
-        gdxVersion = "1.9.6"
-        ranaVersion = "1.1.2"
-        box2DVersion = "1.0.0"
-        textureSlicerVer = "1.1.1"
-        box2DAPILevel = "A.0"
-        r3Version = "1.0.6"
+       
+        scarabeiAndroidVersion = "2.4.1"
+        r3Version = "4.2.0"
     
 }
 
